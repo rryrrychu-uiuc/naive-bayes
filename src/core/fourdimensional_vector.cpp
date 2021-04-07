@@ -1,13 +1,6 @@
-//
-// Created by rryrr on 4/6/2021.
-//
-
 #include "core/fourdimensional_vector.h"
 #include <vector>
-#include <iostream>
-
 using std::vector;
-
 
 FourDimensional_Vector::FourDimensional_Vector(size_t row_num, size_t col_num, size_t class_num, size_t shade_num,
                                                double default_value) : row_size(row_num), col_size(col_num),
@@ -46,18 +39,18 @@ vector<double> FourDimensional_Vector::GetShades(size_t row, size_t col, size_t 
     return data_values_[row][col][class_label];
 }
 
-void FourDimensional_Vector::Print4DVector() {
-    for (size_t i = 0; i < 3; i++) {
-        for (size_t j = 0; j < 3; j++) {
-            std::cout << "(" << i << "," << j << "):" << std::endl << "----------" << std::endl;
-            for (size_t k = 0; k < 10; k++) {
-                std::cout << "Class " << k << ": [ ";
-                for (size_t l = 0; l < 2; l++) {
-                    std::cout << data_values_[i][j][k][l] << " ";
-                }
-                std::cout << "]" << std::endl;
-            }
-            std::cout << std::endl;
-        }
-    }
+size_t FourDimensional_Vector::GetRowSize() {
+    return row_size;
+}
+
+size_t FourDimensional_Vector::GetColSize() {
+    return col_size;
+}
+
+size_t FourDimensional_Vector::GetClassSize() {
+    return class_size;
+}
+
+size_t FourDimensional_Vector::GetShadeSize() {
+    return shade_size;
 }

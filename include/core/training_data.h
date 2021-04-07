@@ -6,10 +6,15 @@
 class Training_Data {
 public:
     Training_Data(int label, Matrix image);
+    
     int GetClassLabel();
+    
     Matrix GetFeatureMatrix();
+    
     size_t GetRowSize(); 
+    
     size_t GetColSize();
+    
     void Print();
 
 private:
@@ -18,6 +23,5 @@ private:
     size_t col_size;
     Matrix feature_matrix;
 };
-
 
 #endif //NAIVE_BAYES_TRAINING_DATA_H
