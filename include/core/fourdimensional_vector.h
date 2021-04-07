@@ -14,9 +14,14 @@ public:
     double GetValue(size_t row, size_t col, size_t class_label, size_t shade);
     vector<double> GetShades(size_t row, size_t col, size_t class_label);
     void SetValue(size_t row, size_t col, size_t class_label, size_t shade, double val);
+    void Print4DVector();
     
 private:
     vector<vector<vector<vector<double>>>> data_values_;
+    size_t row_size;
+    size_t col_size;
+    size_t class_size;
+    size_t shade_size;
 };
 
 

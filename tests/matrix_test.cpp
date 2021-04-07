@@ -22,7 +22,6 @@ TEST_CASE("SetValue Method") {
         starting_matrix.SetValue(1,1,'z');
         starting_matrix.SetValue(2,0,'+');
         starting_matrix.SetValue(2,2,'+');
-        starting_matrix.PrintMatrix();
     }
 }
 

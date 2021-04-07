@@ -6,17 +6,45 @@
 
 #IncludeRegexTransform: 
 
-../include/core/multidimensional_vector.h
+../include/core/fourdimensional_vector.h
 vector
 -
 
-C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/multidimensional_vector_test.cpp
+../include/core/image_processor.h
+matrix.h
+../include/core/matrix.h
+training_data.h
+../include/core/training_data.h
+
+../include/core/matrix.h
+vector
+-
+
+../include/core/naive_bayes_model.h
+vector
+-
+matrix.h
+../include/core/matrix.h
+training_data.h
+../include/core/training_data.h
+fourdimensional_vector.h
+../include/core/fourdimensional_vector.h
+
+../include/core/training_data.h
+matrix.h
+../include/core/matrix.h
+
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/naive_bayes_model_test.cc
 catch2/catch.hpp
+-
+core/naive_bayes_model.h
+-
+core/image_processor.h
+-
+fstream
 -
 iostream
 -
-core/multidimensional_vector.h
-C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/core/multidimensional_vector.h
 
 _deps/catch2-src/single_include/catch2/catch.hpp
 TargetConditionals.h

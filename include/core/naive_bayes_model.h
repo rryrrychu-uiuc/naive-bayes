@@ -9,11 +9,14 @@ using std::vector;
 #define NAIVE_BAYES_NAIVE_BAYES_MODEL_H
 namespace naivebayes {
 class Naive_Bayes_Model {
-    
+public:
     Naive_Bayes_Model(vector<Training_Data> dataset);
     FourDimensional_Vector GetConditionalProbabilities();
     vector<double> GetPriorProbabilities();
+
+    friend std::istream &operator>>(std::istream& is, Naive_Bayes_Model& bayes_model);
     
+    friend std::ostream &operator<<(std::ostream& is, Naive_Bayes_Model& bayes_model);
     
 private:
     const int kLaplaceSmoothingValue;
@@ -24,11 +27,18 @@ private:
     const size_t kColSize;
     int num_training_images_;
     
-    //each location in matrix is another 2D matrix
-    //Matrix[class_label][shade]
+    //4d vector formatted like [row][col][class_label][shade]
     FourDimensional_Vector conditional_probabilities_;
     vector<double> prior_probabilities_;
+
+    //counts the number of various shades for every training image
+    vector<int> CountShadesAndClasses(vector<Training_Data> dataset);
     
+    //divide each shade count by 2k + number of training images of labelled 'c' to get the conditional probability
+    void CalculateConditionalProbabilities(vector<int> class_counts);
+
+    //calculate the prior probabilities using formula from instructions and the counts of each class
+    void CalculatePriorProbabilities(vector<int> class_counts);
 };
 }
 

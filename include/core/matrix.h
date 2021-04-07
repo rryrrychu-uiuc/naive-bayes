@@ -18,9 +18,8 @@ public:
 
 private:
     vector<vector<char>> data_values_;
-    size_t row_size;
-    size_t col_size;
-    int class_label;
+    const size_t row_size;
+    const size_t col_size;
 };
 
 
