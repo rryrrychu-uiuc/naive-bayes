@@ -2,8 +2,8 @@
 #include <iostream>
 #include "core/fourdimensional_vector.h"
 
-TEST_CASE("Initialize multidimensional vector"){
-    Multidimensional_Vector small_picture(3,3,10,2,1);
+TEST_CASE("Initialize fourdimensional vector"){
+    FourDimensional_Vector small_picture(3,3,10,2,1);
     
     for(size_t i = 0; i < 3; i++) {
         for(size_t j = 0; j < 3; j++) {

@@ -9,8 +9,16 @@ CMakeFiles\naive-bayes-test.dir\src\core\image_processor.cpp.obj: ..\src\core\im
 CMakeFiles\naive-bayes-test.dir\src\core\matrix.cpp.obj: ..\include\core\matrix.h
 CMakeFiles\naive-bayes-test.dir\src\core\matrix.cpp.obj: ..\src\core\matrix.cpp
 
+CMakeFiles\naive-bayes-test.dir\src\core\multidimensional_vector.cpp.obj: ..\include\core\multidimensional_vector.h
+CMakeFiles\naive-bayes-test.dir\src\core\multidimensional_vector.cpp.obj: ..\src\core\multidimensional_vector.cpp
+
 CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj: ..\include\core\naive_bayes_calculations.h
 CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj: ..\src\core\naive_bayes_calculations.cc
+
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj: ..\include\core\matrix.h
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj: ..\include\core\naive_bayes_model.h
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj: ..\include\core\training_data.h
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj: ..\src\core\naive_bayes_model.cpp
 
 CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj: ..\include\core\matrix.h
 CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj: ..\include\core\training_data.h
@@ -1754,10 +1762,19 @@ CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj: ..\include\core\matri
 CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj: ..\tests\matrix_test.cpp
 CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj: _deps\catch2-src\single_include\catch2\catch.hpp
 
+CMakeFiles\naive-bayes-test.dir\tests\multidimensional_vector_test.cpp.obj: ..\include\core\multidimensional_vector.h
+CMakeFiles\naive-bayes-test.dir\tests\multidimensional_vector_test.cpp.obj: ..\tests\multidimensional_vector_test.cpp
+CMakeFiles\naive-bayes-test.dir\tests\multidimensional_vector_test.cpp.obj: _deps\catch2-src\single_include\catch2\catch.hpp
+
 CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj: ..\include\core\naive_bayes_calculations.h
 CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj: ..\tests\naive_bayes_calculation_test.cc
 CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj: _deps\catch2-src\single_include\catch2\catch.hpp
 
 CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.obj: ..\tests\test_main.cc
 CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.obj: _deps\catch2-src\single_include\catch2\catch.hpp
+
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj: ..\include\core\matrix.h
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj: ..\include\core\training_data.h
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj: ..\tests\training_data_test.cpp
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj: _deps\catch2-src\single_include\catch2\catch.hpp
 

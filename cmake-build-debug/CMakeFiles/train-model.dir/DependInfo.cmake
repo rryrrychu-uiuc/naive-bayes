@@ -5,9 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/apps/train_model_main.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/apps/train_model_main.cc.obj"
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/fourdimensional_vector.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/fourdimensional_vector.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/image_processor.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/image_processor.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/matrix.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/matrix.cpp.obj"
-  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_calculations.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/naive_bayes_calculations.cc.obj"
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/naive_bayes_model.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/training_data.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/training_data.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

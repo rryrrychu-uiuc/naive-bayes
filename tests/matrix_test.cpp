@@ -14,6 +14,7 @@ TEST_CASE("Matrix initialization") {
 
 TEST_CASE("SetValue Method") {
     SECTION("Manually changing values") {
+        
         Matrix starting_matrix(3, 3);
         starting_matrix.PrintMatrix();
         starting_matrix.SetValue(0,0,'+');

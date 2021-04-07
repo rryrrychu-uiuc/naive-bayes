@@ -207,6 +207,39 @@ apps\train_model_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\apps\train_model_main.cc.s
 .PHONY : apps\train_model_main.cc.s
 
+src\core\fourdimensional_vector.obj: src\core\fourdimensional_vector.cpp.obj
+
+.PHONY : src\core\fourdimensional_vector.obj
+
+# target to build an object file
+src\core\fourdimensional_vector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\fourdimensional_vector.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.obj
+.PHONY : src\core\fourdimensional_vector.cpp.obj
+
+src\core\fourdimensional_vector.i: src\core\fourdimensional_vector.cpp.i
+
+.PHONY : src\core\fourdimensional_vector.i
+
+# target to preprocess a source file
+src\core\fourdimensional_vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\fourdimensional_vector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.i
+.PHONY : src\core\fourdimensional_vector.cpp.i
+
+src\core\fourdimensional_vector.s: src\core\fourdimensional_vector.cpp.s
+
+.PHONY : src\core\fourdimensional_vector.s
+
+# target to generate assembly for a file
+src\core\fourdimensional_vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\fourdimensional_vector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.s
+.PHONY : src\core\fourdimensional_vector.cpp.s
+
 src\core\image_processor.obj: src\core\image_processor.cpp.obj
 
 .PHONY : src\core\image_processor.obj
@@ -273,38 +306,38 @@ src\core\matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\matrix.cpp.s
 .PHONY : src\core\matrix.cpp.s
 
-src\core\naive_bayes_calculations.obj: src\core\naive_bayes_calculations.cc.obj
+src\core\naive_bayes_model.obj: src\core\naive_bayes_model.cpp.obj
 
-.PHONY : src\core\naive_bayes_calculations.obj
+.PHONY : src\core\naive_bayes_model.obj
 
 # target to build an object file
-src\core\naive_bayes_calculations.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\naive_bayes_calculations.cc.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_calculations.cc.obj
-.PHONY : src\core\naive_bayes_calculations.cc.obj
+src\core\naive_bayes_model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\naive_bayes_model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.obj
+.PHONY : src\core\naive_bayes_model.cpp.obj
 
-src\core\naive_bayes_calculations.i: src\core\naive_bayes_calculations.cc.i
+src\core\naive_bayes_model.i: src\core\naive_bayes_model.cpp.i
 
-.PHONY : src\core\naive_bayes_calculations.i
+.PHONY : src\core\naive_bayes_model.i
 
 # target to preprocess a source file
-src\core\naive_bayes_calculations.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\naive_bayes_calculations.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_calculations.cc.i
-.PHONY : src\core\naive_bayes_calculations.cc.i
+src\core\naive_bayes_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\naive_bayes_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.i
+.PHONY : src\core\naive_bayes_model.cpp.i
 
-src\core\naive_bayes_calculations.s: src\core\naive_bayes_calculations.cc.s
+src\core\naive_bayes_model.s: src\core\naive_bayes_model.cpp.s
 
-.PHONY : src\core\naive_bayes_calculations.s
+.PHONY : src\core\naive_bayes_model.s
 
 # target to generate assembly for a file
-src\core\naive_bayes_calculations.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\naive_bayes_calculations.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_calculations.cc.s
-.PHONY : src\core\naive_bayes_calculations.cc.s
+src\core\naive_bayes_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\naive_bayes_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.s
+.PHONY : src\core\naive_bayes_model.cpp.s
 
 src\core\training_data.obj: src\core\training_data.cpp.obj
 
@@ -399,6 +432,33 @@ src\visualizer\sketchpad.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.s
 .PHONY : src\visualizer\sketchpad.cc.s
 
+tests\fourdimensional_vector_test.obj: tests\fourdimensional_vector_test.cpp.obj
+
+.PHONY : tests\fourdimensional_vector_test.obj
+
+# target to build an object file
+tests\fourdimensional_vector_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj
+.PHONY : tests\fourdimensional_vector_test.cpp.obj
+
+tests\fourdimensional_vector_test.i: tests\fourdimensional_vector_test.cpp.i
+
+.PHONY : tests\fourdimensional_vector_test.i
+
+# target to preprocess a source file
+tests\fourdimensional_vector_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.i
+.PHONY : tests\fourdimensional_vector_test.cpp.i
+
+tests\fourdimensional_vector_test.s: tests\fourdimensional_vector_test.cpp.s
+
+.PHONY : tests\fourdimensional_vector_test.s
+
+# target to generate assembly for a file
+tests\fourdimensional_vector_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.s
+.PHONY : tests\fourdimensional_vector_test.cpp.s
+
 tests\image_processor_test.obj: tests\image_processor_test.cpp.obj
 
 .PHONY : tests\image_processor_test.obj
@@ -453,32 +513,32 @@ tests\matrix_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.s
 .PHONY : tests\matrix_test.cpp.s
 
-tests\naive_bayes_calculation_test.obj: tests\naive_bayes_calculation_test.cc.obj
+tests\naive_bayes_model_test.obj: tests\naive_bayes_model_test.cc.obj
 
-.PHONY : tests\naive_bayes_calculation_test.obj
+.PHONY : tests\naive_bayes_model_test.obj
 
 # target to build an object file
-tests\naive_bayes_calculation_test.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj
-.PHONY : tests\naive_bayes_calculation_test.cc.obj
+tests\naive_bayes_model_test.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj
+.PHONY : tests\naive_bayes_model_test.cc.obj
 
-tests\naive_bayes_calculation_test.i: tests\naive_bayes_calculation_test.cc.i
+tests\naive_bayes_model_test.i: tests\naive_bayes_model_test.cc.i
 
-.PHONY : tests\naive_bayes_calculation_test.i
+.PHONY : tests\naive_bayes_model_test.i
 
 # target to preprocess a source file
-tests\naive_bayes_calculation_test.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.i
-.PHONY : tests\naive_bayes_calculation_test.cc.i
+tests\naive_bayes_model_test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.i
+.PHONY : tests\naive_bayes_model_test.cc.i
 
-tests\naive_bayes_calculation_test.s: tests\naive_bayes_calculation_test.cc.s
+tests\naive_bayes_model_test.s: tests\naive_bayes_model_test.cc.s
 
-.PHONY : tests\naive_bayes_calculation_test.s
+.PHONY : tests\naive_bayes_model_test.s
 
 # target to generate assembly for a file
-tests\naive_bayes_calculation_test.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.s
-.PHONY : tests\naive_bayes_calculation_test.cc.s
+tests\naive_bayes_model_test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.s
+.PHONY : tests\naive_bayes_model_test.cc.s
 
 tests\test_main.obj: tests\test_main.cc.obj
 
@@ -507,6 +567,33 @@ tests\test_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.s
 .PHONY : tests\test_main.cc.s
 
+tests\training_data_test.obj: tests\training_data_test.cpp.obj
+
+.PHONY : tests\training_data_test.obj
+
+# target to build an object file
+tests\training_data_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj
+.PHONY : tests\training_data_test.cpp.obj
+
+tests\training_data_test.i: tests\training_data_test.cpp.i
+
+.PHONY : tests\training_data_test.i
+
+# target to preprocess a source file
+tests\training_data_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.i
+.PHONY : tests\training_data_test.cpp.i
+
+tests\training_data_test.s: tests\training_data_test.cpp.s
+
+.PHONY : tests\training_data_test.s
+
+# target to generate assembly for a file
+tests\training_data_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.s
+.PHONY : tests\training_data_test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -524,15 +611,18 @@ help:
 	@echo ... apps/train_model_main.obj
 	@echo ... apps/train_model_main.i
 	@echo ... apps/train_model_main.s
+	@echo ... src/core/fourdimensional_vector.obj
+	@echo ... src/core/fourdimensional_vector.i
+	@echo ... src/core/fourdimensional_vector.s
 	@echo ... src/core/image_processor.obj
 	@echo ... src/core/image_processor.i
 	@echo ... src/core/image_processor.s
 	@echo ... src/core/matrix.obj
 	@echo ... src/core/matrix.i
 	@echo ... src/core/matrix.s
-	@echo ... src/core/naive_bayes_calculations.obj
-	@echo ... src/core/naive_bayes_calculations.i
-	@echo ... src/core/naive_bayes_calculations.s
+	@echo ... src/core/naive_bayes_model.obj
+	@echo ... src/core/naive_bayes_model.i
+	@echo ... src/core/naive_bayes_model.s
 	@echo ... src/core/training_data.obj
 	@echo ... src/core/training_data.i
 	@echo ... src/core/training_data.s
@@ -542,18 +632,24 @@ help:
 	@echo ... src/visualizer/sketchpad.obj
 	@echo ... src/visualizer/sketchpad.i
 	@echo ... src/visualizer/sketchpad.s
+	@echo ... tests/fourdimensional_vector_test.obj
+	@echo ... tests/fourdimensional_vector_test.i
+	@echo ... tests/fourdimensional_vector_test.s
 	@echo ... tests/image_processor_test.obj
 	@echo ... tests/image_processor_test.i
 	@echo ... tests/image_processor_test.s
 	@echo ... tests/matrix_test.obj
 	@echo ... tests/matrix_test.i
 	@echo ... tests/matrix_test.s
-	@echo ... tests/naive_bayes_calculation_test.obj
-	@echo ... tests/naive_bayes_calculation_test.i
-	@echo ... tests/naive_bayes_calculation_test.s
+	@echo ... tests/naive_bayes_model_test.obj
+	@echo ... tests/naive_bayes_model_test.i
+	@echo ... tests/naive_bayes_model_test.s
 	@echo ... tests/test_main.obj
 	@echo ... tests/test_main.i
 	@echo ... tests/test_main.s
+	@echo ... tests/training_data_test.obj
+	@echo ... tests/training_data_test.i
+	@echo ... tests/training_data_test.s
 .PHONY : help
 
 

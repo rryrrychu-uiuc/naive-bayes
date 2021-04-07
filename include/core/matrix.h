@@ -5,6 +5,7 @@ using std::vector;
 #ifndef NAIVE_BAYES_MATRIX_H
 #define NAIVE_BAYES_MATRIX_H
 
+//template <typename ElementType>
 class Matrix {
 public:
     Matrix();

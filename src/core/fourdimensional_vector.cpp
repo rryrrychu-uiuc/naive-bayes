@@ -39,3 +39,7 @@ double FourDimensional_Vector::GetValue(size_t row, size_t col, size_t class_lab
 void FourDimensional_Vector::SetValue(size_t row, size_t col, size_t class_label, size_t shade, double val) {
     data_values_[row][col][class_label][shade] = val;
 }
+
+vector<double> FourDimensional_Vector::GetShades(size_t row, size_t col, size_t class_label) {
+    return data_values_[row][col][class_label];
+}

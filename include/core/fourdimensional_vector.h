@@ -12,6 +12,7 @@ public:
     FourDimensional_Vector(size_t row, size_t col, size_t class_num, size_t shade_num, double laplace_smoothing);
     
     double GetValue(size_t row, size_t col, size_t class_label, size_t shade);
+    vector<double> GetShades(size_t row, size_t col, size_t class_label);
     void SetValue(size_t row, size_t col, size_t class_label, size_t shade, double val);
     
 private:

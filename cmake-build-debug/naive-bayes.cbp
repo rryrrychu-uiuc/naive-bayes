@@ -224,6 +224,11 @@
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/apps/train_model_main.cc">
 			<Option target="train-model"/>
 		</Unit>
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/fourdimensional_vector.cpp">
+			<Option target="naive-bayes-test"/>
+			<Option target="train-model"/>
+			<Option target="sketchpad-classifier"/>
+		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/image_processor.cpp">
 			<Option target="naive-bayes-test"/>
 			<Option target="train-model"/>
@@ -234,7 +239,7 @@
 			<Option target="train-model"/>
 			<Option target="sketchpad-classifier"/>
 		</Unit>
-		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_calculations.cc">
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp">
 			<Option target="naive-bayes-test"/>
 			<Option target="train-model"/>
 			<Option target="sketchpad-classifier"/>
@@ -252,16 +257,22 @@
 			<Option target="naive-bayes-test"/>
 			<Option target="sketchpad-classifier"/>
 		</Unit>
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/fourdimensional_vector_test.cpp">
+			<Option target="naive-bayes-test"/>
+		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/image_processor_test.cpp">
 			<Option target="naive-bayes-test"/>
 		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/matrix_test.cpp">
 			<Option target="naive-bayes-test"/>
 		</Unit>
-		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/naive_bayes_calculation_test.cc">
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/naive_bayes_model_test.cc">
 			<Option target="naive-bayes-test"/>
 		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/test_main.cc">
+			<Option target="naive-bayes-test"/>
+		</Unit>
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/training_data_test.cpp">
 			<Option target="naive-bayes-test"/>
 		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/CMakeLists.txt">

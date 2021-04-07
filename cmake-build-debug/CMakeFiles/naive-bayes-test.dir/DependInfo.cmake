@@ -4,16 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/fourdimensional_vector.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/core/fourdimensional_vector.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/image_processor.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/core/image_processor.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/matrix.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/core/matrix.cpp.obj"
-  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_calculations.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_calculations.cc.obj"
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_model.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/training_data.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/core/training_data.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/visualizer/naive_bayes_app.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/visualizer/naive_bayes_app.cc.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/visualizer/sketchpad.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/src/visualizer/sketchpad.cc.obj"
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/fourdimensional_vector_test.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/fourdimensional_vector_test.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/image_processor_test.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/image_processor_test.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/matrix_test.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/matrix_test.cpp.obj"
-  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/naive_bayes_calculation_test.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_calculation_test.cc.obj"
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/naive_bayes_model_test.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_model_test.cc.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/test_main.cc" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/test_main.cc.obj"
+  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/training_data_test.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/naive-bayes-test.dir/tests/training_data_test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

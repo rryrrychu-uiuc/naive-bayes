@@ -80,23 +80,23 @@ CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\tests\test_main.cc.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\test_main.cc
 <<
 
-CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj: CMakeFiles\naive-bayes-test.dir\flags.make
-CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj: ..\src\core\naive_bayes_calculations.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_calculations.cc.obj"
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj: ..\src\core\naive_bayes_model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_model.cpp.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\naive_bayes_calculations.cc
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\naive_bayes_model.cpp
 <<
 
-CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_calculations.cc.i"
-	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\naive_bayes_calculations.cc
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_model.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\naive_bayes_model.cpp
 <<
 
-CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_calculations.cc.s"
+CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_model.cpp.s"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\naive_bayes_calculations.cc
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\naive_bayes_model.cpp
 <<
 
 CMakeFiles\naive-bayes-test.dir\src\core\matrix.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
@@ -156,9 +156,28 @@ CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\training_data.cpp
 <<
 
+CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
+CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.obj: ..\src\core\fourdimensional_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/core/fourdimensional_vector.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\fourdimensional_vector.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/src/core/fourdimensional_vector.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\fourdimensional_vector.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/src/core/fourdimensional_vector.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\fourdimensional_vector.cpp
+<<
+
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: CMakeFiles\naive-bayes-test.dir\flags.make
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\src\visualizer\naive_bayes_app.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/visualizer/naive_bayes_app.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/visualizer/naive_bayes_app.cc.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\visualizer\naive_bayes_app.cc
 <<
@@ -177,7 +196,7 @@ CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.s: cmake_force
 
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: CMakeFiles\naive-bayes-test.dir\flags.make
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: ..\src\visualizer\sketchpad.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/visualizer/sketchpad.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/naive-bayes-test.dir/src/visualizer/sketchpad.cc.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\visualizer\sketchpad.cc
 <<
@@ -194,28 +213,28 @@ CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\visualizer\sketchpad.cc
 <<
 
-CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj: CMakeFiles\naive-bayes-test.dir\flags.make
-CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj: ..\tests\naive_bayes_calculation_test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_calculation_test.cc.obj"
+CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj: CMakeFiles\naive-bayes-test.dir\flags.make
+CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj: ..\tests\naive_bayes_model_test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_model_test.cc.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\naive_bayes_calculation_test.cc
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\naive_bayes_model_test.cc
 <<
 
-CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_calculation_test.cc.i"
-	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\naive_bayes_calculation_test.cc
+CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_model_test.cc.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\naive_bayes_model_test.cc
 <<
 
-CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_calculation_test.cc.s"
+CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/tests/naive_bayes_model_test.cc.s"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\naive_bayes_calculation_test.cc
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\naive_bayes_model_test.cc
 <<
 
 CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
 CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj: ..\tests\matrix_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/matrix_test.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/matrix_test.cpp.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\matrix_test.cpp
 <<
@@ -234,7 +253,7 @@ CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.s: cmake_force
 
 CMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
 CMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.obj: ..\tests\image_processor_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/image_processor_test.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/image_processor_test.cpp.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\image_processor_test.cpp
 <<
@@ -251,36 +270,80 @@ CMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\image_processor_test.cpp
 <<
 
+CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
+CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj: ..\tests\fourdimensional_vector_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/fourdimensional_vector_test.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\fourdimensional_vector_test.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/tests/fourdimensional_vector_test.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\fourdimensional_vector_test.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/tests/fourdimensional_vector_test.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\fourdimensional_vector_test.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj: CMakeFiles\naive-bayes-test.dir\flags.make
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj: ..\tests\training_data_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/naive-bayes-test.dir/tests/training_data_test.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj /FdCMakeFiles\naive-bayes-test.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\training_data_test.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/naive-bayes-test.dir/tests/training_data_test.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\training_data_test.cpp
+<<
+
+CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/naive-bayes-test.dir/tests/training_data_test.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\tests\training_data_test.cpp
+<<
+
 # Object files for target naive-bayes-test
 naive__bayes__test_OBJECTS = \
 "CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.obj" \
-"CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj" \
+"CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj" \
 "CMakeFiles\naive-bayes-test.dir\src\core\matrix.cpp.obj" \
 "CMakeFiles\naive-bayes-test.dir\src\core\image_processor.cpp.obj" \
 "CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj" \
+"CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.obj" \
 "CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj" \
 "CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj" \
-"CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj" \
+"CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj" \
 "CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj" \
-"CMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.obj"
+"CMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.obj" \
+"CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj" \
+"CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj"
 
 # External object files for target naive-bayes-test
 naive__bayes__test_EXTERNAL_OBJECTS =
 
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.obj
-Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_calculations.cc.obj
+Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\core\naive_bayes_model.cpp.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\core\matrix.cpp.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\core\image_processor.cpp.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj
+Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\core\fourdimensional_vector.cpp.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj
-Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_calculation_test.cc.obj
+Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\matrix_test.cpp.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\image_processor_test.cpp.obj
+Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj
+Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\tests\training_data_test.cpp.obj
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\build.make
 Debug\naive-bayes-test\naive-bayes-test.exe: C:\Users\rryrr\CLionProjects\Cinder\lib\msw\x86\Debug\v140\cinder.lib
 Debug\naive-bayes-test\naive-bayes-test.exe: CMakeFiles\naive-bayes-test.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Debug\naive-bayes-test\naive-bayes-test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Debug\naive-bayes-test\naive-bayes-test.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\naive-bayes-test.dir --rc=C:\PROGRA~2\WI3CF2~1\8.1\bin\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\8.1\bin\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1.0\VC\bin\link.exe /nologo @CMakeFiles\naive-bayes-test.dir\objects1.rsp @<<
  /out:Debug\naive-bayes-test\naive-bayes-test.exe /implib:naive-bayes-test.lib /pdb:C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\Debug\naive-bayes-test\naive-bayes-test.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:windows  /SUBSYSTEM:CONSOLE /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCPMT   -LIBPATH:C:\Users\rryrr\CLionProjects\Cinder\lib\msw\x86  C:\Users\rryrr\CLionProjects\Cinder\lib\msw\x86\Debug\v140\cinder.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
