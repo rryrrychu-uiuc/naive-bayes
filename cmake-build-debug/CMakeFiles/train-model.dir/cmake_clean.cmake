@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/train-model.dir/src/core/image_processor.cpp.obj"
   "CMakeFiles/train-model.dir/src/core/matrix.cpp.obj"
   "CMakeFiles/train-model.dir/src/core/naive_bayes_model.cpp.obj"
-  "CMakeFiles/train-model.dir/src/core/training_data.cpp.obj"
   "train-model.exe"
   "train-model.exe.manifest"
   "train-model.lib"

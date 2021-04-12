@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/image_processor.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/image_processor.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/matrix.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/matrix.cpp.obj"
   "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/naive_bayes_model.cpp.obj"
-  "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/training_data.cpp" "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/CMakeFiles/train-model.dir/src/core/training_data.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

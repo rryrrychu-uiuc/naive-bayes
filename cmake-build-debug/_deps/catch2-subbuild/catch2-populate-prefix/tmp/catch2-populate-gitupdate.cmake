@@ -1,3 +1,7 @@
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file Copyright.txt or https://cmake.org/licensing for details.
+
+cmake_minimum_required(VERSION 3.5)
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe" rev-list --max-count=1 HEAD
@@ -11,7 +15,7 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "C:/Program Files/Git/cmd/git.exe" show-ref v2.11.1
+  COMMAND "C:/Program Files/Git/cmd/git.exe" show-ref "v2.11.1"
   WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
   OUTPUT_VARIABLE show_ref_output
   )
@@ -37,7 +41,7 @@ endif()
 # This will fail if the tag does not exist (it probably has not been fetched
 # yet).
 execute_process(
-  COMMAND "C:/Program Files/Git/cmd/git.exe" rev-list --max-count=1 v2.11.1
+  COMMAND "C:/Program Files/Git/cmd/git.exe" rev-list --max-count=1 "${git_tag}"
   WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
   RESULT_VARIABLE error_code
   OUTPUT_VARIABLE tag_sha
@@ -68,8 +72,8 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     endif()
     string(LENGTH "${repo_status}" need_stash)
 
-    # If not in clean state, stash changes in order to be able to be able to
-    # perform git pull --rebase
+    # If not in clean state, stash changes in order to be able to perform a
+    # rebase or checkout without losing those changes permanently
     if(need_stash)
       execute_process(
         COMMAND "C:/Program Files/Git/cmd/git.exe" stash save --all;--quiet
@@ -81,25 +85,77 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
       endif()
     endif()
 
-    # Pull changes from the remote branch
-    execute_process(
-      COMMAND "C:/Program Files/Git/cmd/git.exe" rebase ${git_remote}/${git_tag}
-      WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
-      RESULT_VARIABLE error_code
-      )
-    if(error_code)
-      # Rebase failed: Restore previous state.
+    if("REBASE" STREQUAL "CHECKOUT")
       execute_process(
-        COMMAND "C:/Program Files/Git/cmd/git.exe" rebase --abort
+        COMMAND "C:/Program Files/Git/cmd/git.exe" checkout "${git_remote}/${git_tag}"
         WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
-      )
-      if(need_stash)
-        execute_process(
-          COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
-          WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
-          )
+        RESULT_VARIABLE error_code
+        )
+      if(error_code)
+        message(FATAL_ERROR "Failed to checkout tag: '${git_remote}/${git_tag}'")
       endif()
-      message(FATAL_ERROR "\nFailed to rebase in: 'C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src/'.\nYou will have to resolve the conflicts manually")
+    else()
+      # Pull changes from the remote branch
+      execute_process(
+        COMMAND "C:/Program Files/Git/cmd/git.exe" rebase "${git_remote}/${git_tag}"
+        WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
+        RESULT_VARIABLE error_code
+        OUTPUT_VARIABLE rebase_output
+        ERROR_VARIABLE  rebase_output
+        )
+      if(error_code)
+        # Rebase failed, undo the rebase attempt before continuing
+        execute_process(
+          COMMAND "C:/Program Files/Git/cmd/git.exe" rebase --abort
+          WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
+        )
+
+        if(NOT "REBASE" STREQUAL "REBASE_CHECKOUT")
+          # Not allowed to do a checkout as a fallback, so cannot proceed
+          if(need_stash)
+            execute_process(
+              COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
+              WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
+              )
+          endif()
+          message(FATAL_ERROR "\nFailed to rebase in: 'C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src'."
+                              "\nOutput from the attempted rebase follows:"
+                              "\n${rebase_output}"
+                              "\n\nYou will have to resolve the conflicts manually")
+        endif()
+
+        # Fall back to checkout. We create an annotated tag so that the user
+        # can manually inspect the situation and revert if required.
+        # We can't log the failed rebase output because MSVC sees it and
+        # intervenes, causing the build to fail even though it completes.
+        # Write it to a file instead.
+        string(TIMESTAMP tag_timestamp "%Y%m%dT%H%M%S" UTC)
+        set(tag_name _cmake_ExternalProject_moved_from_here_${tag_timestamp}Z)
+        set(error_log_file ${CMAKE_CURRENT_LIST_DIR}/rebase_error_${tag_timestamp}Z.log)
+        file(WRITE ${error_log_file} "${rebase_output}")
+        message(WARNING "Rebase failed, output has been saved to ${error_log_file}"
+                        "\nFalling back to checkout, previous commit tagged as ${tag_name}")
+        execute_process(
+          COMMAND "C:/Program Files/Git/cmd/git.exe" tag -a
+                  -m "ExternalProject attempting to move from here to ${git_remote}/${git_tag}"
+                  ${tag_name}
+          WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
+          RESULT_VARIABLE error_code
+        )
+        if(error_code)
+          message(FATAL_ERROR "Failed to add marker tag")
+        endif()
+
+        execute_process(
+          COMMAND "C:/Program Files/Git/cmd/git.exe" checkout "${git_remote}/${git_tag}"
+          WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
+          RESULT_VARIABLE error_code
+        )
+        if(error_code)
+          message(FATAL_ERROR "Failed to checkout : '${git_remote}/${git_tag}'")
+        endif()
+
+      endif()
     endif()
 
     if(need_stash)
@@ -130,31 +186,31 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
             COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
             WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
           )
-          message(FATAL_ERROR "\nFailed to unstash changes in: 'C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src/'.\nYou will have to resolve the conflicts manually")
+          message(FATAL_ERROR "\nFailed to unstash changes in: 'C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src'."
+                              "\nYou will have to resolve the conflicts manually")
         endif()
       endif()
     endif()
   else()
     execute_process(
-      COMMAND "C:/Program Files/Git/cmd/git.exe" checkout v2.11.1
+      COMMAND "C:/Program Files/Git/cmd/git.exe" checkout "${git_tag}"
       WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
       RESULT_VARIABLE error_code
       )
     if(error_code)
-      message(FATAL_ERROR "Failed to checkout tag: 'v2.11.1'")
+      message(FATAL_ERROR "Failed to checkout tag: '${git_tag}'")
     endif()
   endif()
 
-  set(init_submodules TRUE)
+  set(init_submodules "TRUE")
   if(init_submodules)
     execute_process(
       COMMAND "C:/Program Files/Git/cmd/git.exe" submodule update --recursive --init 
-      WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src/"
+      WORKING_DIRECTORY "C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src"
       RESULT_VARIABLE error_code
       )
   endif()
   if(error_code)
-    message(FATAL_ERROR "Failed to update submodules in: 'C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src/'")
+    message(FATAL_ERROR "Failed to update submodules in: 'C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/cmake-build-debug/_deps/catch2-src'")
   endif()
 endif()
-
