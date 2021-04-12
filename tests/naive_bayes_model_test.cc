@@ -7,7 +7,7 @@
 using namespace naivebayes;
 
 TEST_CASE("Proper Model Calculations") {
-    Image_Processor test_process(5, 5);
+    ImageProcessor test_process(5, 5);
 
     std::ifstream target_file;
     target_file.open("tests/test_data/test_images.txt");
@@ -16,8 +16,8 @@ TEST_CASE("Proper Model Calculations") {
     } else if (target_file.bad()) {
         throw std::invalid_argument("File doesn't exist");
     }
-    vector<Training_Data> test_values = test_process.GetLabelledImages();
-    Naive_Bayes_Model bayes_model(test_values);
+    vector<TrainingData> test_values = test_process.GetLabelledImages();
+    NaiveBayesModel bayes_model(test_values);
 
     SECTION("Test Conditional Probabilities") {
 

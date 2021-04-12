@@ -224,6 +224,11 @@
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/apps/train_model_main.cc">
 			<Option target="train-model"/>
 		</Unit>
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/classifier.cpp">
+			<Option target="naive-bayes-test"/>
+			<Option target="train-model"/>
+			<Option target="sketchpad-classifier"/>
+		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/fourdimensional_vector.cpp">
 			<Option target="naive-bayes-test"/>
 			<Option target="train-model"/>
@@ -240,6 +245,11 @@
 			<Option target="sketchpad-classifier"/>
 		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp">
+			<Option target="naive-bayes-test"/>
+			<Option target="train-model"/>
+			<Option target="sketchpad-classifier"/>
+		</Unit>
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/training_data.cpp">
 			<Option target="naive-bayes-test"/>
 			<Option target="train-model"/>
 			<Option target="sketchpad-classifier"/>

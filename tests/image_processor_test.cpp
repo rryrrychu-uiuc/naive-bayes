@@ -4,7 +4,7 @@
 #include <fstream>
 
 TEST_CASE("Proper Image Processing") {
-    Image_Processor test_process(5,5);
+    ImageProcessor test_process(5, 5);
 
     std::ifstream target_file;
 
@@ -16,11 +16,11 @@ TEST_CASE("Proper Image Processing") {
         throw std::invalid_argument("File doesn't exist");
     }
     
-    vector<Training_Data> test_values = test_process.GetLabelledImages();
+    vector<TrainingData> test_values = test_process.GetLabelledImages();
     REQUIRE(test_values.size() == 8);
     vector<int> values = {6,7,8,7,6,7,8,8};
     int index = 0;
-    for(Training_Data labelled_value: test_values) {
+    for(TrainingData labelled_value: test_values) {
         REQUIRE(labelled_value.GetClassLabel() == values[index]);
         index++;
     }

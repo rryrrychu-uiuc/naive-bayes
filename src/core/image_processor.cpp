@@ -1,15 +1,14 @@
 #include <string>
 #include "core/image_processor.h"
-#include "core/matrix.h"
 
-Image_Processor::Image_Processor(size_t num_rows, size_t num_cols) :
+ImageProcessor::ImageProcessor(size_t num_rows, size_t num_cols) :
         kNumRows(num_rows), kNumCols(num_cols) {}
 
-vector<Training_Data> Image_Processor::GetLabelledImages() {
+vector<TrainingData> ImageProcessor::GetLabelledImages() {
     return labelled_images;
 }        
         
-std::istream &operator>>(std::istream& is, Image_Processor& processed_images) {
+std::istream &operator>>(std::istream& is, ImageProcessor& processed_images) {
 
     while (!is.eof()) {
         //takes the label number
@@ -26,7 +25,7 @@ std::istream &operator>>(std::istream& is, Image_Processor& processed_images) {
             }
         }
 
-        processed_images.labelled_images.push_back(Training_Data(number_label, image));
+        processed_images.labelled_images.push_back(TrainingData(number_label, image));
     }
 
     return is;

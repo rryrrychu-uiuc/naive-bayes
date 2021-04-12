@@ -1,29 +1,28 @@
+#pragma once
 #include "core/training_data.h"
-#include <iostream>
 
-Training_Data::Training_Data(int label, Matrix image) : class_label(label), feature_matrix(image){
+TrainingData::TrainingData(int label, Matrix image) : feature_matrix(image), class_label(label){
     
     row_size = feature_matrix.GetRowSize();
     col_size = feature_matrix.GetColSize();
 }
 
-int Training_Data::GetClassLabel() {
+int TrainingData::GetClassLabel() {
     return class_label;
 }
 
-Matrix Training_Data::GetFeatureMatrix() {
+Matrix TrainingData::GetFeatureMatrix() {
     return feature_matrix;
 }
 
-size_t Training_Data::GetRowSize() {
+char TrainingData::GetValue(size_t row, size_t col) {
+    return feature_matrix.GetValue(row, col);
+}
+
+size_t TrainingData::GetRowSize() {
     return row_size;
 }
 
-size_t Training_Data::GetColSize() {
+size_t TrainingData::GetColSize() {
     return col_size;
-}
-
-void Training_Data::Print() {
-    std::cout << class_label << std::endl;
-    feature_matrix.PrintMatrix();
 }

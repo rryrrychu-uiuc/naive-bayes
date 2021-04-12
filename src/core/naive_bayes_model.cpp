@@ -7,23 +7,23 @@ using std::to_string;
 
 namespace naivebayes {
 
-    Naive_Bayes_Model::Naive_Bayes_Model(size_t row_size, size_t col_size) :
+    NaiveBayesModel::NaiveBayesModel(size_t row_size, size_t col_size) :
             kRowSize(row_size),
             kColSize(col_size),
-            kBlackShadeValue(0),
-            kWhiteShadeValue(1),
+            kShadedValue(0),
+            kUnshadedValue(1),
             kLaplaceSmoothingValue(1),
             kPossibleClassNum(10),
             conditional_probabilities_(kRowSize, kColSize, kPossibleClassNum, 2, kLaplaceSmoothingValue) {
 
     }
 
-    Naive_Bayes_Model::Naive_Bayes_Model(vector<Training_Data> dataset) :
+    NaiveBayesModel::NaiveBayesModel(vector<TrainingData> dataset) :
             num_training_images_(dataset.size()),
             kRowSize(dataset[0].GetRowSize()),
             kColSize(dataset[0].GetColSize()),
-            kBlackShadeValue(0),
-            kWhiteShadeValue(1),
+            kShadedValue(0),
+            kUnshadedValue(1),
             kLaplaceSmoothingValue(1),
             kPossibleClassNum(10),
             conditional_probabilities_(kRowSize, kColSize, kPossibleClassNum, 2, kLaplaceSmoothingValue) {
@@ -33,28 +33,28 @@ namespace naivebayes {
         CalculatePriorProbabilities(class_counts);
     }
 
-    vector<int> Naive_Bayes_Model::CountShadesAndClasses(vector<Training_Data> dataset) {
+    vector<int> NaiveBayesModel::CountShadesAndClasses(vector<TrainingData> dataset) {
         vector<int> class_counts(kPossibleClassNum);
 
         //determine the counts for the shades from the training data
-        for (Training_Data data_value : dataset) {
+        for (TrainingData data_value : dataset) {
 
             //counts number of each class in training data
             int class_labels = data_value.GetClassLabel();
             class_counts[class_labels]++;
 
             //count the shades for each of the classes on each index in the matrix
-            for (size_t row = 0; row < data_value.GetFeatureMatrix().GetRowSize(); row++) {
-                for (size_t col = 0; col < data_value.GetFeatureMatrix().GetColSize(); col++) {
+            for (size_t row = 0; row < data_value.GetRowSize(); row++) {
+                for (size_t col = 0; col < data_value.GetColSize(); col++) {
                     vector<double> shade_counts = conditional_probabilities_.GetShades(row, col, class_labels);
-                    char shade = data_value.GetFeatureMatrix().GetValue(row, col);
+                    char shade = data_value.GetValue(row, col);
 
                     if (shade == ' ') {
-                        conditional_probabilities_.SetValue(row, col, class_labels, kWhiteShadeValue,
-                                                            shade_counts[kWhiteShadeValue] + 1);
+                        conditional_probabilities_.SetValue(row, col, class_labels, kUnshadedValue,
+                                                            shade_counts[kUnshadedValue] + 1);
                     } else if (shade == '+' || shade == '#') {
-                        conditional_probabilities_.SetValue(row, col, class_labels, kBlackShadeValue,
-                                                            shade_counts[kBlackShadeValue] + 1);
+                        conditional_probabilities_.SetValue(row, col, class_labels, kShadedValue,
+                                                            shade_counts[kShadedValue] + 1);
                     }
                 }
             }
@@ -62,7 +62,7 @@ namespace naivebayes {
         return class_counts;
     }
 
-    void Naive_Bayes_Model::CalculateConditionalProbabilities(vector<int> class_counts) {
+    void NaiveBayesModel::CalculateConditionalProbabilities(vector<int> class_counts) {
         for (size_t row = 0; row < kRowSize; row++) {
             for (size_t col = 0; col < kColSize; col++) {
                 for (size_t class_label = 0; class_label < class_counts.size(); class_label++) {
@@ -77,7 +77,7 @@ namespace naivebayes {
         }
     }
 
-    void Naive_Bayes_Model::CalculatePriorProbabilities(vector<int> class_counts) {
+    void NaiveBayesModel::CalculatePriorProbabilities(vector<int> class_counts) {
 
         for (size_t index = 0; index < class_counts.size(); index++) {
             double prior_probability = (double) (kLaplaceSmoothingValue + class_counts[index]) /
@@ -85,16 +85,29 @@ namespace naivebayes {
             prior_probabilities_.push_back(prior_probability);
         }
     }
-
-    FourDimensional_Vector Naive_Bayes_Model::GetConditionalProbabilities() {
+    
+    FourDimensional_Vector NaiveBayesModel::GetConditionalProbabilities() {
         return conditional_probabilities_;
     }
 
-    vector<double> Naive_Bayes_Model::GetPriorProbabilities() {
+    vector<double> NaiveBayesModel::GetPriorProbabilities() {
         return prior_probabilities_;
     }
 
-    std::istream &operator>>(std::istream &is, Naive_Bayes_Model &bayes_model) {
+    double NaiveBayesModel::GetConditionalProbability(size_t row, size_t col, int class_label, int shade) {
+        return conditional_probabilities_.GetValue(row, col, class_label, shade);
+    }
+    
+    double NaiveBayesModel::GetPriorProbability(int class_label) {
+        
+        if(class_label < 0 || class_label > 9) {
+            throw std::invalid_argument("Class must be between 0 and 9 (inclusive)");
+        }
+        
+        return prior_probabilities_[class_label];
+    }
+    
+    std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model) {
 
         vector<size_t> sizes;
 
@@ -141,7 +154,7 @@ namespace naivebayes {
         return is;
     }
 
-    std::ostream &operator<<(std::ostream &os, Naive_Bayes_Model &bayes_model) {
+    std::ostream &operator<<(std::ostream &os, NaiveBayesModel &bayes_model) {
         FourDimensional_Vector values = bayes_model.GetConditionalProbabilities();
         //print out four key sizes of 4d vector
         os << to_string(values.GetRowSize()) << " " << to_string(values.GetColSize()) << " "
@@ -166,6 +179,4 @@ namespace naivebayes {
 
         return os;
     }
-
-
 } //namespace naivebayes

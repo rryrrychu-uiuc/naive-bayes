@@ -6,9 +6,33 @@
 
 #IncludeRegexTransform: 
 
-../include/core/rename_this_file.h
-string
+../include/core/fourdimensional_vector.h
+vector
 -
+
+../include/core/image_processor.h
+matrix.h
+../include/core/matrix.h
+training_data.h
+../include/core/training_data.h
+
+../include/core/matrix.h
+vector
+-
+
+../include/core/naive_bayes_model.h
+vector
+-
+matrix.h
+../include/core/matrix.h
+training_data.h
+../include/core/training_data.h
+fourdimensional_vector.h
+../include/core/fourdimensional_vector.h
+
+../include/core/training_data.h
+matrix.h
+../include/core/matrix.h
 
 ../include/visualizer/naive_bayes_app.h
 cinder/app/App.h
@@ -8106,9 +8130,33 @@ C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/apps/
 visualizer/naive_bayes_app.h
 -
 
-C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/rename_this_file.cc
-core/rename_this_file.h
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/fourdimensional_vector.cpp
+core/fourdimensional_vector.h
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/core/fourdimensional_vector.h
+vector
 -
+
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/image_processor.cpp
+string
+-
+core/image_processor.h
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/core/image_processor.h
+core/matrix.h
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/core/matrix.h
+
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/matrix.cpp
+core/matrix.h
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/core/matrix.h
+iostream
+-
+
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp
+string
+-
+sstream
+-
+core/naive_bayes_model.h
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/core/naive_bayes_model.h
 
 C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/visualizer/naive_bayes_app.cc
 visualizer/naive_bayes_app.h

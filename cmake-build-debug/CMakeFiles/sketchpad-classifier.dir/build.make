@@ -155,9 +155,47 @@ CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.s: cmake
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\fourdimensional_vector.cpp
 <<
 
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj: CMakeFiles\sketchpad-classifier.dir\flags.make
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj: ..\src\core\training_data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sketchpad-classifier.dir/src/core/training_data.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj /FdCMakeFiles\sketchpad-classifier.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\training_data.cpp
+<<
+
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sketchpad-classifier.dir/src/core/training_data.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\training_data.cpp
+<<
+
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sketchpad-classifier.dir/src/core/training_data.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\training_data.cpp
+<<
+
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: CMakeFiles\sketchpad-classifier.dir\flags.make
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\src\core\classifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sketchpad-classifier.dir/src/core/classifier.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj /FdCMakeFiles\sketchpad-classifier.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\classifier.cpp
+<<
+
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sketchpad-classifier.dir/src/core/classifier.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\classifier.cpp
+<<
+
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sketchpad-classifier.dir/src/core/classifier.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\classifier.cpp
+<<
+
 CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj: CMakeFiles\sketchpad-classifier.dir\flags.make
 CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj: ..\src\visualizer\naive_bayes_app.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sketchpad-classifier.dir/src/visualizer/naive_bayes_app.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sketchpad-classifier.dir/src/visualizer/naive_bayes_app.cc.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj /FdCMakeFiles\sketchpad-classifier.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\visualizer\naive_bayes_app.cc
 <<
@@ -176,7 +214,7 @@ CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.s: cmake_f
 
 CMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.obj: CMakeFiles\sketchpad-classifier.dir\flags.make
 CMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.obj: ..\src\visualizer\sketchpad.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sketchpad-classifier.dir/src/visualizer/sketchpad.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sketchpad-classifier.dir/src/visualizer/sketchpad.cc.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.obj /FdCMakeFiles\sketchpad-classifier.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\visualizer\sketchpad.cc
 <<
@@ -200,6 +238,8 @@ sketchpad__classifier_OBJECTS = \
 "CMakeFiles\sketchpad-classifier.dir\src\core\matrix.cpp.obj" \
 "CMakeFiles\sketchpad-classifier.dir\src\core\image_processor.cpp.obj" \
 "CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.obj" \
+"CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj" \
+"CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj" \
 "CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj" \
 "CMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.obj"
 
@@ -211,12 +251,14 @@ Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classi
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\core\matrix.cpp.obj
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\core\image_processor.cpp.obj
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.obj
+Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj
+Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.obj
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\build.make
 Debug\sketchpad-classifier\sketchpad-classifier.exe: C:\Users\rryrr\CLionProjects\Cinder\lib\msw\x86\Debug\v140\cinder.lib
 Debug\sketchpad-classifier\sketchpad-classifier.exe: CMakeFiles\sketchpad-classifier.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Debug\sketchpad-classifier\sketchpad-classifier.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Debug\sketchpad-classifier\sketchpad-classifier.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\sketchpad-classifier.dir --rc=C:\PROGRA~2\WI3CF2~1\8.1\bin\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\8.1\bin\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~1.0\VC\bin\link.exe /nologo @CMakeFiles\sketchpad-classifier.dir\objects1.rsp @<<
  /out:Debug\sketchpad-classifier\sketchpad-classifier.exe /implib:sketchpad-classifier.lib /pdb:C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\Debug\sketchpad-classifier\sketchpad-classifier.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:windows /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCPMT   -LIBPATH:C:\Users\rryrr\CLionProjects\Cinder\lib\msw\x86  C:\Users\rryrr\CLionProjects\Cinder\lib\msw\x86\Debug\v140\cinder.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

@@ -1,21 +1,22 @@
+#pragma once
 #ifndef NAIVE_BAYES_TRAINING_DATA_H
 #define NAIVE_BAYES_TRAINING_DATA_H
 
 #include "matrix.h"
 
-class Training_Data {
+class TrainingData {
 public:
-    Training_Data(int label, Matrix image);
+    TrainingData(int label, Matrix image);
     
     int GetClassLabel();
     
     Matrix GetFeatureMatrix();
     
+    char GetValue(size_t row, size_t col);
+    
     size_t GetRowSize(); 
     
     size_t GetColSize();
-    
-    void Print();
 
 private:
     int class_label;

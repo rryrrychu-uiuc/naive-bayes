@@ -8,7 +8,7 @@ CMake Deprecation Warning at C:/Users/rryrr/CLionProjects/Cinder/proj/cmake/modu
   specific short-term circumstances.  Projects should be ported to the NEW
   behavior and not rely on setting a policy to OLD.
 Call Stack (most recent call first):
-  CMakeLists.txt:69 (ci_make_app)
+  CMakeLists.txt:71 (ci_make_app)
 
 
 CMake Deprecation Warning at C:/Users/rryrr/CLionProjects/Cinder/proj/cmake/modules/cinderMakeApp.cmake:130 (cmake_policy):
@@ -20,7 +20,7 @@ CMake Deprecation Warning at C:/Users/rryrr/CLionProjects/Cinder/proj/cmake/modu
   specific short-term circumstances.  Projects should be ported to the NEW
   behavior and not rely on setting a policy to OLD.
 Call Stack (most recent call first):
-  CMakeLists.txt:76 (ci_make_app)
+  CMakeLists.txt:78 (ci_make_app)
 
 
 -- Configuring done
