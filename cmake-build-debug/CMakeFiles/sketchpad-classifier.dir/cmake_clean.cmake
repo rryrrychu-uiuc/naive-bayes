@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sketchpad-classifier.dir/src/core/matrix.cpp.obj"
   "CMakeFiles/sketchpad-classifier.dir/src/core/naive_bayes_model.cpp.obj"
   "CMakeFiles/sketchpad-classifier.dir/src/core/training_data.cpp.obj"
+  "CMakeFiles/sketchpad-classifier.dir/src/core/validator.cpp.obj"
   "CMakeFiles/sketchpad-classifier.dir/src/visualizer/naive_bayes_app.cc.obj"
   "CMakeFiles/sketchpad-classifier.dir/src/visualizer/sketchpad.cc.obj"
   "Debug/sketchpad-classifier/sketchpad-classifier.exe"

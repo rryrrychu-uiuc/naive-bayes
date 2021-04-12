@@ -404,6 +404,39 @@ src\core\training_data.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.s
 .PHONY : src\core\training_data.cpp.s
 
+src\core\validator.obj: src\core\validator.cpp.obj
+
+.PHONY : src\core\validator.obj
+
+# target to build an object file
+src\core\validator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\validator.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj
+.PHONY : src\core\validator.cpp.obj
+
+src\core\validator.i: src\core\validator.cpp.i
+
+.PHONY : src\core\validator.i
+
+# target to preprocess a source file
+src\core\validator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\validator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.i
+.PHONY : src\core\validator.cpp.i
+
+src\core\validator.s: src\core\validator.cpp.s
+
+.PHONY : src\core\validator.s
+
+# target to generate assembly for a file
+src\core\validator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\train-model.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\train-model.dir\src\core\validator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.s
+.PHONY : src\core\validator.cpp.s
+
 src\visualizer\naive_bayes_app.obj: src\visualizer\naive_bayes_app.cc.obj
 
 .PHONY : src\visualizer\naive_bayes_app.obj
@@ -634,6 +667,9 @@ help:
 	@echo ... src/core/training_data.obj
 	@echo ... src/core/training_data.i
 	@echo ... src/core/training_data.s
+	@echo ... src/core/validator.obj
+	@echo ... src/core/validator.i
+	@echo ... src/core/validator.s
 	@echo ... src/visualizer/naive_bayes_app.obj
 	@echo ... src/visualizer/naive_bayes_app.i
 	@echo ... src/visualizer/naive_bayes_app.s

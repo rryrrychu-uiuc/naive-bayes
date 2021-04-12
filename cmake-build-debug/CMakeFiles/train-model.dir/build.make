@@ -193,6 +193,25 @@ CMakeFiles\train-model.dir\src\core\classifier.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\train-model.dir\src\core\classifier.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\classifier.cpp
 <<
 
+CMakeFiles\train-model.dir\src\core\validator.cpp.obj: CMakeFiles\train-model.dir\flags.make
+CMakeFiles\train-model.dir\src\core\validator.cpp.obj: ..\src\core\validator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/train-model.dir/src/core/validator.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\train-model.dir\src\core\validator.cpp.obj /FdCMakeFiles\train-model.dir\ /FS -c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\validator.cpp
+<<
+
+CMakeFiles\train-model.dir\src\core\validator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/train-model.dir/src/core/validator.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\train-model.dir\src\core\validator.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\validator.cpp
+<<
+
+CMakeFiles\train-model.dir\src\core\validator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/train-model.dir/src/core/validator.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\train-model.dir\src\core\validator.cpp.s /c C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\src\core\validator.cpp
+<<
+
 # Object files for target train-model
 train__model_OBJECTS = \
 "CMakeFiles\train-model.dir\apps\train_model_main.cc.obj" \
@@ -201,7 +220,8 @@ train__model_OBJECTS = \
 "CMakeFiles\train-model.dir\src\core\image_processor.cpp.obj" \
 "CMakeFiles\train-model.dir\src\core\fourdimensional_vector.cpp.obj" \
 "CMakeFiles\train-model.dir\src\core\training_data.cpp.obj" \
-"CMakeFiles\train-model.dir\src\core\classifier.cpp.obj"
+"CMakeFiles\train-model.dir\src\core\classifier.cpp.obj" \
+"CMakeFiles\train-model.dir\src\core\validator.cpp.obj"
 
 # External object files for target train-model
 train__model_EXTERNAL_OBJECTS =
@@ -213,9 +233,10 @@ train-model.exe: CMakeFiles\train-model.dir\src\core\image_processor.cpp.obj
 train-model.exe: CMakeFiles\train-model.dir\src\core\fourdimensional_vector.cpp.obj
 train-model.exe: CMakeFiles\train-model.dir\src\core\training_data.cpp.obj
 train-model.exe: CMakeFiles\train-model.dir\src\core\classifier.cpp.obj
+train-model.exe: CMakeFiles\train-model.dir\src\core\validator.cpp.obj
 train-model.exe: CMakeFiles\train-model.dir\build.make
 train-model.exe: CMakeFiles\train-model.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable train-model.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable train-model.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\train-model.dir --rc=C:\PROGRA~2\WI3CF2~1\8.1\bin\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\8.1\bin\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~1.0\VC\bin\link.exe /nologo @CMakeFiles\train-model.dir\objects1.rsp @<<
  /out:train-model.exe /implib:train-model.lib /pdb:C:\Users\rryrr\CLionProjects\Cinder\my-projects\naive-bayes-rryrrychu-uiuc\cmake-build-debug\train-model.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

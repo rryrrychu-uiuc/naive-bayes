@@ -54,7 +54,8 @@ list(APPEND CORE_SOURCE_FILES   src/core/naive_bayes_model.cpp
                                 src/core/image_processor.cpp
                                 src/core/fourdimensional_vector.cpp
                                 src/core/training_data.cpp
-                                src/core/classifier.cpp)
+                                src/core/classifier.cpp
+                                src/core/validator.cpp)
 
 list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
                             src/visualizer/naive_bayes_app.cc

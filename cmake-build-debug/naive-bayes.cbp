@@ -254,6 +254,11 @@
 			<Option target="train-model"/>
 			<Option target="sketchpad-classifier"/>
 		</Unit>
+		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/validator.cpp">
+			<Option target="naive-bayes-test"/>
+			<Option target="train-model"/>
+			<Option target="sketchpad-classifier"/>
+		</Unit>
 		<Unit filename="C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/visualizer/naive_bayes_app.cc">
 			<Option target="naive-bayes-test"/>
 			<Option target="sketchpad-classifier"/>

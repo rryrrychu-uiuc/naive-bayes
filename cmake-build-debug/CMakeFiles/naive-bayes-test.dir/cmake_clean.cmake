@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/naive-bayes-test.dir/src/core/matrix.cpp.obj"
   "CMakeFiles/naive-bayes-test.dir/src/core/naive_bayes_model.cpp.obj"
   "CMakeFiles/naive-bayes-test.dir/src/core/training_data.cpp.obj"
+  "CMakeFiles/naive-bayes-test.dir/src/core/validator.cpp.obj"
   "CMakeFiles/naive-bayes-test.dir/src/visualizer/naive_bayes_app.cc.obj"
   "CMakeFiles/naive-bayes-test.dir/src/visualizer/sketchpad.cc.obj"
   "CMakeFiles/naive-bayes-test.dir/tests/fourdimensional_vector_test.cpp.obj"

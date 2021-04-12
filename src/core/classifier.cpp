@@ -1,7 +1,10 @@
 #include <algorithm>
 #include "core/classifier.h"
 
-Classifier::Classifier(vector<TrainingData> dataset): trained_model_(dataset){}
+Classifier::Classifier(vector<TrainingData> dataset, size_t row, size_t col): trained_model_(dataset){
+    row_size = row;
+    col_size = col;
+}
 
 float Classifier::GetPredictedValue(Matrix image) {
     vector<float> likelihood_scores = CalculateLikelihoodScores(image);
@@ -33,3 +36,10 @@ vector<float> Classifier::CalculateLikelihoodScores(Matrix image) {
     return likelihood_scores;
 }
 
+size_t Classifier::GetRowSize() {
+    return row_size;
+}
+
+size_t Classifier::GetColSize() {
+    return col_size;
+}
