@@ -36,6 +36,10 @@ namespace naivebayes {
 
         void AddPriorValue(float val);
         
+        size_t GetRowSize();
+        
+        size_t GetColSize();
+        
         void Print();
         
         friend std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model);
@@ -49,8 +53,8 @@ namespace naivebayes {
         const int kUnshadedValue;
         const size_t kRowSize;
         const size_t kColSize;
+        
         int num_training_images_;
-
         vector<float> prior_probabilities_;
 
         //4d vector formatted like [row][col][class_label][shade]

@@ -25,6 +25,8 @@ public:
     
     size_t GetColSize();
 
+    friend std::istream &operator>>(std::istream &is, Matrix &target_matrix);
+
 private:
     vector<vector<char>> data_values_;
     const size_t kRowSize;

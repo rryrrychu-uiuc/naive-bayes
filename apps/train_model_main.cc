@@ -7,7 +7,7 @@
 
 using naivebayes::NaiveBayesModel;
 
-const int kRowColumnLength = 5;
+const int kRowColumnLength = 28;
 
 NaiveBayesModel TrainModel(std::string file_path) {
     ImageProcessor test_process(kRowColumnLength, kRowColumnLength);
@@ -38,38 +38,28 @@ void SaveModel(std::string file_path, NaiveBayesModel bayes_model) {
 }
 
 float ValidateClassifier(std::string file_path, NaiveBayesModel new_model) {
-    Classifier target_classifier(new_model, kRowColumnLength, kRowColumnLength);
+    Classifier target_classifier(new_model);
     Validator target_validator(target_classifier);
 
     std::ifstream target_file;
     target_file.open(file_path);
-    if (target_file.good()) {
-        target_file >> target_validator;
-    } else if (target_file.bad()) {
-        throw std::invalid_argument("File doesn't exist");
-    }
+    target_file >> target_validator;
     
     vector<int> determined_classification = target_validator.GetDeterminedClassifications();
     vector<int> labelled_values = target_validator.GetLabelledValues();
-    
-    std::cout << labelled_values.size() << " " << determined_classification.size() << std::endl;
-    for(size_t index = 0; index < labelled_values.size(); index++) {
-        std::cout << determined_classification[index] << " " << labelled_values[index] << std::endl;
-    }
     
     return target_validator.GetClassifierAccuracy();
 }
 
 int main() {
 
-    NaiveBayesModel bayes_model = TrainModel("tests/test_data/test_images.txt");
+    NaiveBayesModel bayes_model = TrainModel("data/trainingimagesandlabels.txt");
     SaveModel("apps/saved_model2.txt", bayes_model);
     
-    //NaiveBayesModel new_model = LoadModel("apps/saved_model.txt");
+    NaiveBayesModel new_model = LoadModel("apps/saved_model.txt");
     //new_model.Print();
 
-    //float accuracy = ValidateClassifier("data/trainingimagesandlabels.txt", new_model);
-    
-    //std::cout << "accuracy:" << accuracy << std::endl;
+    float accuracy = ValidateClassifier("data/testimagesandlabels.txt", new_model);
+    std::cout << "accuracy: " << accuracy << std::endl;
     return 0;
 }

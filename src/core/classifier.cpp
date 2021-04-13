@@ -1,16 +1,22 @@
 #include <algorithm>
+#include <string>
 #include "core/classifier.h"
 
-Classifier::Classifier(NaiveBayesModel target_model, size_t row, size_t col): trained_model_(target_model){
-    row_size = row;
-    col_size = col;
+Classifier::Classifier(NaiveBayesModel target_model): trained_model_(target_model){
+    row_size = trained_model_.GetRowSize();
+    col_size = trained_model_.GetColSize();
 }
 
-int Classifier::GetPredictedValue(Matrix image) {
+int Classifier::GetPredictedClass(Matrix image) {
+    
+    if(image.GetRowSize() != GetRowSize() || image.GetColSize() != GetColSize()) {
+        throw std::invalid_argument("Image must be " + std::to_string(GetRowSize())  + "x" + std::to_string(GetColSize()) );
+    }
+    
     vector<float> likelihood_scores = CalculateLikelihoodScores(image);
     
     int max_index = 0;
-    float max_value = -1;
+    float max_value = (float)0 - std::numeric_limits<float>::max();
     
     for(size_t index = 0; index < likelihood_scores.size(); index++) {
         if(likelihood_scores[index] > max_value) {
@@ -18,7 +24,6 @@ int Classifier::GetPredictedValue(Matrix image) {
             max_value = likelihood_scores[index];
         }
     }
-    
     
     return max_index;
 }

@@ -1766,7 +1766,13 @@ CMakeFiles/naive-bayes-test.dir/src/visualizer/sketchpad.cc.obj
  C:/Users/rryrr/CLionProjects/Cinder/include/glm/vector_relational.hpp
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/visualizer/sketchpad.cc
 CMakeFiles/naive-bayes-test.dir/tests/classifier_test.cpp.obj
+ ../include/core/classifier.h
+ ../include/core/fourdimensional_vector.h
+ ../include/core/matrix.h
+ ../include/core/naive_bayes_model.h
+ ../include/core/training_data.h
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/classifier_test.cpp
+ _deps/catch2-src/single_include/catch2/catch.hpp
 CMakeFiles/naive-bayes-test.dir/tests/fourdimensional_vector_test.cpp.obj
  ../include/core/fourdimensional_vector.h
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/fourdimensional_vector_test.cpp
@@ -1794,3 +1800,4 @@ CMakeFiles/naive-bayes-test.dir/tests/test_main.cc.obj
  _deps/catch2-src/single_include/catch2/catch.hpp
 CMakeFiles/naive-bayes-test.dir/tests/validator_test.cpp.obj
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/validator_test.cpp
+ _deps/catch2-src/single_include/catch2/catch.hpp

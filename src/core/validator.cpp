@@ -12,7 +12,7 @@ float Validator::GetClassifierAccuracy() {
         }
     }
     
-    return (float)num_correct_classified;
+    return (float)num_correct_classified/classifications_.size();
 }
 
 vector<int> Validator::GetLabelledValues() {
@@ -44,7 +44,7 @@ std::istream &operator>>(std::istream& is, Validator& target_validator) {
             }
         }
         
-        target_validator.classifications_.push_back(target_classifier.GetPredictedValue(image));
+        target_validator.classifications_.push_back(target_classifier.GetPredictedClass(image));
     }
 
     return is;

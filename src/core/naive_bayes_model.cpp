@@ -15,9 +15,7 @@ namespace naivebayes {
             kUnshadedValue(1),
             kLaplaceSmoothingValue(1),
             kPossibleClassNum(10),
-            conditional_probabilities_(kRowSize, kColSize, kPossibleClassNum, 2, kLaplaceSmoothingValue) {
-
-    }
+            conditional_probabilities_(kRowSize, kColSize, kPossibleClassNum, 2, kLaplaceSmoothingValue) {}
 
     NaiveBayesModel::NaiveBayesModel(vector<TrainingData> dataset) :
             num_training_images_(dataset.size()),
@@ -118,6 +116,14 @@ namespace naivebayes {
 
     void NaiveBayesModel::AddPriorValue(float val) {
         prior_probabilities_.push_back(val);
+    }
+
+    size_t NaiveBayesModel::GetRowSize() {
+        return kRowSize;
+    }
+
+    size_t NaiveBayesModel::GetColSize() {
+        return kColSize;
     }
     
     void NaiveBayesModel::Print() {

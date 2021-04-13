@@ -10,10 +10,28 @@ using naivebayes::NaiveBayesModel;
 class Classifier {
 public:
     
-    Classifier(NaiveBayesModel target_model, size_t row_size, size_t col_size);
-    int GetPredictedValue(Matrix image);
+    /**
+     * Create a classifier given a certain model
+     * @param target_model 
+     */
+    Classifier(NaiveBayesModel target_model);
+    
+    /**
+     * Given a matrix representation of an image, classify it as a certain class 
+     * @param image the image to classify
+     * @return the class the image is classified, throws IllegalArgument if matrix is not the same size as the model
+     */
+    int GetPredictedClass(Matrix image);
+    
+    /**
+     * calculate the likelihood scores for each class using logarithms to prevent underflow
+     * @param image target to get the likelihood for 
+     * @return a vector with likelihoods for each class
+     */
+    vector<float> CalculateLikelihoodScores(Matrix image);
     
     size_t GetRowSize();
+    
     size_t GetColSize();
     
 private:
@@ -26,9 +44,7 @@ private:
     NaiveBayesModel trained_model_;
     size_t row_size;
     size_t col_size;
-
-    //calculate the likelihood scores for each class using logarithms to prevent underflow
-    vector<float> CalculateLikelihoodScores(Matrix image);
+    
 };
 
 
