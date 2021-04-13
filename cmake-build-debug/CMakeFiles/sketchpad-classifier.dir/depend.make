@@ -878,6 +878,13 @@ CMakeFiles\sketchpad-classifier.dir\apps\cinder_app_main.cc.obj: C:\Users\rryrr\
 CMakeFiles\sketchpad-classifier.dir\apps\cinder_app_main.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\glm\vector_relational.hpp
 CMakeFiles\sketchpad-classifier.dir\apps\cinder_app_main.cc.obj: ..\apps\cinder_app_main.cc
 
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\include\core\classifier.h
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\include\core\fourdimensional_vector.h
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\include\core\matrix.h
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\include\core\naive_bayes_model.h
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\include\core\training_data.h
+CMakeFiles\sketchpad-classifier.dir\src\core\classifier.cpp.obj: ..\src\core\classifier.cpp
+
 CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.obj: ..\include\core\fourdimensional_vector.h
 CMakeFiles\sketchpad-classifier.dir\src\core\fourdimensional_vector.cpp.obj: ..\src\core\fourdimensional_vector.cpp
 
@@ -894,6 +901,18 @@ CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.obj: ..\inclu
 CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.obj: ..\include\core\naive_bayes_model.h
 CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.obj: ..\include\core\training_data.h
 CMakeFiles\sketchpad-classifier.dir\src\core\naive_bayes_model.cpp.obj: ..\src\core\naive_bayes_model.cpp
+
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj: ..\include\core\matrix.h
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj: ..\include\core\training_data.h
+CMakeFiles\sketchpad-classifier.dir\src\core\training_data.cpp.obj: ..\src\core\training_data.cpp
+
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\include\core\classifier.h
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\include\core\fourdimensional_vector.h
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\include\core\matrix.h
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\include\core\naive_bayes_model.h
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\include\core\training_data.h
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\include\core\validator.h
+CMakeFiles\sketchpad-classifier.dir\src\core\validator.cpp.obj: ..\src\core\validator.cpp
 
 CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\visualizer\naive_bayes_app.h
 CMakeFiles\sketchpad-classifier.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\visualizer\sketchpad.h

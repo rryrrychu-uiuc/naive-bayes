@@ -9,6 +9,10 @@ public:
     
     float GetClassifierAccuracy();
 
+    vector<int> GetLabelledValues();
+    
+    vector<int> GetDeterminedClassifications();
+    
     friend std::istream &operator>>(std::istream &is, Validator &target_validator);
     
 private:

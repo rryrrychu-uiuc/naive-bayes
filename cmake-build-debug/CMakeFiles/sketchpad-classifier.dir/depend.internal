@@ -878,6 +878,13 @@ CMakeFiles/sketchpad-classifier.dir/apps/cinder_app_main.cc.obj
  C:/Users/rryrr/CLionProjects/Cinder/include/glm/vec4.hpp
  C:/Users/rryrr/CLionProjects/Cinder/include/glm/vector_relational.hpp
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/apps/cinder_app_main.cc
+CMakeFiles/sketchpad-classifier.dir/src/core/classifier.cpp.obj
+ ../include/core/classifier.h
+ ../include/core/fourdimensional_vector.h
+ ../include/core/matrix.h
+ ../include/core/naive_bayes_model.h
+ ../include/core/training_data.h
+ C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/classifier.cpp
 CMakeFiles/sketchpad-classifier.dir/src/core/fourdimensional_vector.cpp.obj
  ../include/core/fourdimensional_vector.h
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/fourdimensional_vector.cpp
@@ -895,6 +902,18 @@ CMakeFiles/sketchpad-classifier.dir/src/core/naive_bayes_model.cpp.obj
  ../include/core/naive_bayes_model.h
  ../include/core/training_data.h
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/naive_bayes_model.cpp
+CMakeFiles/sketchpad-classifier.dir/src/core/training_data.cpp.obj
+ ../include/core/matrix.h
+ ../include/core/training_data.h
+ C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/training_data.cpp
+CMakeFiles/sketchpad-classifier.dir/src/core/validator.cpp.obj
+ ../include/core/classifier.h
+ ../include/core/fourdimensional_vector.h
+ ../include/core/matrix.h
+ ../include/core/naive_bayes_model.h
+ ../include/core/training_data.h
+ ../include/core/validator.h
+ C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/src/core/validator.cpp
 CMakeFiles/sketchpad-classifier.dir/src/visualizer/naive_bayes_app.cc.obj
  ../include/visualizer/naive_bayes_app.h
  ../include/visualizer/sketchpad.h

@@ -12,7 +12,15 @@ float Validator::GetClassifierAccuracy() {
         }
     }
     
-    return (float)num_correct_classified/classifications_.size();
+    return (float)num_correct_classified;
+}
+
+vector<int> Validator::GetLabelledValues() {
+    return labelled_values_;
+}
+
+vector<int> Validator::GetDeterminedClassifications() {
+    return classifications_;
 }
 
 std::istream &operator>>(std::istream& is, Validator& target_validator) {

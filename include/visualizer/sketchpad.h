@@ -1,6 +1,9 @@
 #pragma once
 
 #include "cinder/gl/gl.h"
+#include <vector>
+
+using std::vector;
 
 namespace naivebayes {
 
@@ -50,6 +53,10 @@ class Sketchpad {
   void Clear();
 
  private:
+  const char kShadedValue = '#';
+  const char kUnShadedValue = ' ';
+  vector<vector<char>> colors; 
+    
   glm::vec2 top_left_corner_;
 
   size_t num_pixels_per_side_;

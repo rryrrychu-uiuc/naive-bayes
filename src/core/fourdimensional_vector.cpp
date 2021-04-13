@@ -3,18 +3,18 @@
 using std::vector;
 
 FourDimensional_Vector::FourDimensional_Vector(size_t row_num, size_t col_num, size_t class_num, size_t shade_num,
-                                               double default_value) : row_size(row_num), col_size(col_num),
+                                               float default_value) : row_size(row_num), col_size(col_num),
                                                                        class_size(class_num), shade_size(shade_num) {
 
     for (size_t row = 0; row < row_num; row++) {
 
-        vector<vector<vector<double>>> probability_matrix;
+        vector<vector<vector<float>>> probability_matrix;
         for (size_t col = 0; col < col_num; col++) {
 
-            vector<vector<double>> classes;
+            vector<vector<float>> classes;
             for (size_t class_index = 0; class_index < class_num; class_index++) {
 
-                vector<double> shades;
+                vector<float> shades;
                 for (size_t i = 0; i < shade_num; i++) {
                     shades.push_back(default_value);
 
@@ -27,15 +27,15 @@ FourDimensional_Vector::FourDimensional_Vector(size_t row_num, size_t col_num, s
     }
 }
 
-double FourDimensional_Vector::GetValue(size_t row, size_t col, size_t class_label, size_t shade) {
+float FourDimensional_Vector::GetValue(size_t row, size_t col, size_t class_label, size_t shade) {
     return data_values_[row][col][class_label][shade];
 }
 
-void FourDimensional_Vector::SetValue(size_t row, size_t col, size_t class_label, size_t shade, double val) {
+void FourDimensional_Vector::SetValue(size_t row, size_t col, size_t class_label, size_t shade, float val) {
     data_values_[row][col][class_label][shade] = val;
 }
 
-vector<double> FourDimensional_Vector::GetShades(size_t row, size_t col, size_t class_label) {
+vector<float> FourDimensional_Vector::GetShades(size_t row, size_t col, size_t class_label) {
     return data_values_[row][col][class_label];
 }
 

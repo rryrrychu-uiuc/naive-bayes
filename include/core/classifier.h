@@ -5,11 +5,13 @@
 #include "naive_bayes_model.h"
 #include "matrix.h"
 
+using naivebayes::NaiveBayesModel;
+
 class Classifier {
 public:
     
-    Classifier(vector<TrainingData> dataset, size_t row_size, size_t col_size);
-    float GetPredictedValue(Matrix image);
+    Classifier(NaiveBayesModel target_model, size_t row_size, size_t col_size);
+    int GetPredictedValue(Matrix image);
     
     size_t GetRowSize();
     size_t GetColSize();
@@ -21,7 +23,7 @@ private:
     const int kShadedValue = 0;
     const int kUnshadedValue = 1;
 
-    naivebayes::NaiveBayesModel trained_model_;
+    NaiveBayesModel trained_model_;
     size_t row_size;
     size_t col_size;
 

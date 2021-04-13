@@ -24,18 +24,24 @@ namespace naivebayes {
 
         FourDimensional_Vector GetConditionalProbabilities();
 
-        vector<double> GetPriorProbabilities();
-        
-        double GetConditionalProbability(size_t row, size_t col, int class_label, int shade);
-        
-        double GetPriorProbability(int class_label);
+        vector<float> GetPriorProbabilities();
 
+        float GetConditionalProbability(size_t row, size_t col, int class_label, int shade);
+
+        float GetPriorProbability(int class_label);
+
+        void SetProbabilityValue(size_t row, size_t col, size_t class_label, size_t shade, float val);
+        
+        void SetPriorValue(size_t class_label, float val);
+        
+        void Print();
+        
         friend std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model);
 
         friend std::ostream &operator<<(std::ostream &is, NaiveBayesModel &bayes_model);
 
     private:
-        const int kLaplaceSmoothingValue;
+        const float kLaplaceSmoothingValue;
         const int kPossibleClassNum;
         const int kShadedValue;
         const int kUnshadedValue;
@@ -43,7 +49,7 @@ namespace naivebayes {
         const size_t kColSize;
         int num_training_images_;
 
-        vector<double> prior_probabilities_;
+        vector<float> prior_probabilities_;
 
         //4d vector formatted like [row][col][class_label][shade]
         FourDimensional_Vector conditional_probabilities_;
