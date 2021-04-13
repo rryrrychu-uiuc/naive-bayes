@@ -15,7 +15,7 @@ FourDimensional_Vector::FourDimensional_Vector(size_t row_num, size_t col_num, s
             for (size_t class_index = 0; class_index < class_num; class_index++) {
 
                 vector<float> shades;
-                for (size_t i = 0; i < shade_num; i++) {
+                for (size_t shade = 0; shade < shade_num; shade++) {
                     shades.push_back(default_value);
 
                 }

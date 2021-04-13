@@ -7,7 +7,7 @@
 
 using naivebayes::NaiveBayesModel;
 
-const int kRowColumnLength = 28;
+const int kRowColumnLength = 5;
 
 NaiveBayesModel TrainModel(std::string file_path) {
     ImageProcessor test_process(kRowColumnLength, kRowColumnLength);
@@ -62,14 +62,14 @@ float ValidateClassifier(std::string file_path, NaiveBayesModel new_model) {
 
 int main() {
 
-    NaiveBayesModel bayes_model = TrainModel("data/trainingimagesandlabels.txt");
-    SaveModel("apps/saved_model.txt", bayes_model);
+    NaiveBayesModel bayes_model = TrainModel("tests/test_data/test_images.txt");
+    SaveModel("apps/saved_model2.txt", bayes_model);
     
-    NaiveBayesModel new_model = LoadModel("apps/saved_model.txt");
+    //NaiveBayesModel new_model = LoadModel("apps/saved_model.txt");
     //new_model.Print();
 
-    float accuracy = ValidateClassifier("data/trainingimagesandlabels.txt", new_model);
+    //float accuracy = ValidateClassifier("data/trainingimagesandlabels.txt", new_model);
     
-    std::cout << "accuracy:" << accuracy << std::endl;
+    //std::cout << "accuracy:" << accuracy << std::endl;
     return 0;
 }

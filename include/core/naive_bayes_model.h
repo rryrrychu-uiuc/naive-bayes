@@ -33,6 +33,8 @@ namespace naivebayes {
         void SetProbabilityValue(size_t row, size_t col, size_t class_label, size_t shade, float val);
         
         void SetPriorValue(size_t class_label, float val);
+
+        void AddPriorValue(float val);
         
         void Print();
         

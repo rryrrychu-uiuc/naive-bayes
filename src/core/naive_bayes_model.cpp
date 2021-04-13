@@ -116,6 +116,10 @@ namespace naivebayes {
         prior_probabilities_[class_label] = val;
     }
 
+    void NaiveBayesModel::AddPriorValue(float val) {
+        prior_probabilities_.push_back(val);
+    }
+    
     void NaiveBayesModel::Print() {
         for (size_t row = 0; row < conditional_probabilities_.GetRowSize(); row++) {
             for (size_t col = 0; col < conditional_probabilities_.GetColSize(); col++) {
@@ -134,7 +138,11 @@ namespace naivebayes {
     }
     
     std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model) {
-
+        
+        if(is.peek() == std::istream::traits_type::eof() || is.eof()) {
+            throw std::exception();
+        } 
+        
         vector<size_t> sizes;
 
         //gets the sizes from first line of file
@@ -178,6 +186,7 @@ namespace naivebayes {
                     float shadeValue = std::stof(individual_shade);
                     bayes_model.SetProbabilityValue(position[0], position[1], class_label,
                                                                        shade_index, shadeValue);
+                    shade_index++;
                 }
             }
         }

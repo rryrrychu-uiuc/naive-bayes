@@ -29,6 +29,14 @@ CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj: ..\include\core\
 CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj: ..\include\core\training_data.h
 CMakeFiles\naive-bayes-test.dir\src\core\training_data.cpp.obj: ..\src\core\training_data.cpp
 
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\classifier.h
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\fourdimensional_vector.h
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\matrix.h
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\naive_bayes_model.h
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\training_data.h
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\validator.h
+CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\src\core\validator.cpp
+
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\visualizer\naive_bayes_app.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\visualizer\sketchpad.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\boost\assert.hpp
@@ -1757,6 +1765,8 @@ CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: C:\Users\rryrr\
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\glm\vector_relational.hpp
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: ..\src\visualizer\sketchpad.cc
 
+CMakeFiles\naive-bayes-test.dir\tests\classifier_test.cpp.obj: ..\tests\classifier_test.cpp
+
 CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj: ..\include\core\fourdimensional_vector.h
 CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj: ..\tests\fourdimensional_vector_test.cpp
 CMakeFiles\naive-bayes-test.dir\tests\fourdimensional_vector_test.cpp.obj: _deps\catch2-src\single_include\catch2\catch.hpp
@@ -1781,4 +1791,6 @@ CMakeFiles\naive-bayes-test.dir\tests\naive_bayes_model_test.cc.obj: _deps\catch
 
 CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.obj: ..\tests\test_main.cc
 CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.obj: _deps\catch2-src\single_include\catch2\catch.hpp
+
+CMakeFiles\naive-bayes-test.dir\tests\validator_test.cpp.obj: ..\tests\validator_test.cpp
 

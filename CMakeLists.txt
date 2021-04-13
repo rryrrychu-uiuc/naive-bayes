@@ -64,7 +64,9 @@ list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
 list(APPEND TEST_FILES  tests/naive_bayes_model_test.cc
                         tests/matrix_test.cpp
                         tests/image_processor_test.cpp
-                        tests/fourdimensional_vector_test.cpp)
+                        tests/fourdimensional_vector_test.cpp
+                        tests/validator_test.cpp
+                        tests/classifier_test.cpp)
 
 add_executable(train-model apps/train_model_main.cc ${CORE_SOURCE_FILES})
 target_include_directories(train-model PRIVATE include)

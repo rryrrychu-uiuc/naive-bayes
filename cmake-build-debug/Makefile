@@ -497,6 +497,33 @@ src\visualizer\sketchpad.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sketchpad-classifier.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sketchpad-classifier.dir\src\visualizer\sketchpad.cc.s
 .PHONY : src\visualizer\sketchpad.cc.s
 
+tests\classifier_test.obj: tests\classifier_test.cpp.obj
+
+.PHONY : tests\classifier_test.obj
+
+# target to build an object file
+tests\classifier_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\classifier_test.cpp.obj
+.PHONY : tests\classifier_test.cpp.obj
+
+tests\classifier_test.i: tests\classifier_test.cpp.i
+
+.PHONY : tests\classifier_test.i
+
+# target to preprocess a source file
+tests\classifier_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\classifier_test.cpp.i
+.PHONY : tests\classifier_test.cpp.i
+
+tests\classifier_test.s: tests\classifier_test.cpp.s
+
+.PHONY : tests\classifier_test.s
+
+# target to generate assembly for a file
+tests\classifier_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\classifier_test.cpp.s
+.PHONY : tests\classifier_test.cpp.s
+
 tests\fourdimensional_vector_test.obj: tests\fourdimensional_vector_test.cpp.obj
 
 .PHONY : tests\fourdimensional_vector_test.obj
@@ -632,6 +659,33 @@ tests\test_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\test_main.cc.s
 .PHONY : tests\test_main.cc.s
 
+tests\validator_test.obj: tests\validator_test.cpp.obj
+
+.PHONY : tests\validator_test.obj
+
+# target to build an object file
+tests\validator_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\validator_test.cpp.obj
+.PHONY : tests\validator_test.cpp.obj
+
+tests\validator_test.i: tests\validator_test.cpp.i
+
+.PHONY : tests\validator_test.i
+
+# target to preprocess a source file
+tests\validator_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\validator_test.cpp.i
+.PHONY : tests\validator_test.cpp.i
+
+tests\validator_test.s: tests\validator_test.cpp.s
+
+.PHONY : tests\validator_test.s
+
+# target to generate assembly for a file
+tests\validator_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\naive-bayes-test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\naive-bayes-test.dir\tests\validator_test.cpp.s
+.PHONY : tests\validator_test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -676,6 +730,9 @@ help:
 	@echo ... src/visualizer/sketchpad.obj
 	@echo ... src/visualizer/sketchpad.i
 	@echo ... src/visualizer/sketchpad.s
+	@echo ... tests/classifier_test.obj
+	@echo ... tests/classifier_test.i
+	@echo ... tests/classifier_test.s
 	@echo ... tests/fourdimensional_vector_test.obj
 	@echo ... tests/fourdimensional_vector_test.i
 	@echo ... tests/fourdimensional_vector_test.s
@@ -691,6 +748,9 @@ help:
 	@echo ... tests/test_main.obj
 	@echo ... tests/test_main.i
 	@echo ... tests/test_main.s
+	@echo ... tests/validator_test.obj
+	@echo ... tests/validator_test.i
+	@echo ... tests/validator_test.s
 .PHONY : help
 
 
