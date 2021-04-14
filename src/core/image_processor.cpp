@@ -9,11 +9,17 @@ vector<TrainingData> ImageProcessor::GetLabelledImages() {
 }        
         
 std::istream &operator>>(std::istream& is, ImageProcessor& processed_images) {
+    if(is.peek() == std::istream::traits_type::eof() || is.eof()) {
+        throw std::exception();
+    }
 
     while (!is.eof()) {
         //takes the label number
         std::string line;
         std::getline(is, line);
+        if(line == "") {
+            return is;
+        }
         int number_label = std::stoi(line);
 
         //builds matrix representing image from the next lines (assumes square)

@@ -21,7 +21,7 @@ TEST_CASE("Proper Image Processing") {
 
     std::ifstream target_file;
 
-    target_file.open("tests/test_data/test_images.txt");
+    target_file.open("tests/test_data/test_training_images.txt");
     target_file >> test_process;
     
     vector<TrainingData> test_values = test_process.GetLabelledImages();

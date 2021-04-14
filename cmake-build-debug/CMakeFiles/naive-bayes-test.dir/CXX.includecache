@@ -34,14 +34,20 @@ fourdimensional_vector.h
 matrix.h
 ../include/core/matrix.h
 
-C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/classifier_test.cpp
+../include/core/validator.h
+classifier.h
+../include/core/classifier.h
+
+C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/validator_test.cpp
 catch2/catch.hpp
 -
 core/naive_bayes_model.h
 -
-fstream
--
 core/classifier.h
+-
+core/validator.h
+-
+fstream
 -
 iostream
 -
