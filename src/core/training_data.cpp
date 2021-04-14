@@ -2,7 +2,6 @@
 #include "core/training_data.h"
 
 TrainingData::TrainingData(int label, Matrix image) : feature_matrix(image), class_label(label){
-    
     row_size = feature_matrix.GetRowSize();
     col_size = feature_matrix.GetColSize();
 }

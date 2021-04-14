@@ -7,7 +7,6 @@ const int kNumShades = 2;
 using std::to_string;
 
 namespace naivebayes {
-
     NaiveBayesModel::NaiveBayesModel(size_t row_size, size_t col_size) :
             kRowSize(row_size),
             kColSize(col_size),
@@ -77,7 +76,6 @@ namespace naivebayes {
     }
 
     void NaiveBayesModel::CalculatePriorProbabilities(vector<int> class_counts) {
-
         for (size_t index = 0; index < class_counts.size(); index++) {
             float prior_probability = (float) (kLaplaceSmoothingValue + class_counts[index]) /
                                        (kPossibleClassNum * kLaplaceSmoothingValue + num_training_images_);
@@ -85,148 +83,144 @@ namespace naivebayes {
         }
     }
     
-    FourDimensional_Vector NaiveBayesModel::GetConditionalProbabilities() {
-        return conditional_probabilities_;
-    }
+FourDimensional_Vector NaiveBayesModel::GetConditionalProbabilities() {
+    return conditional_probabilities_;
+}
 
-    vector<float> NaiveBayesModel::GetPriorProbabilities() {
-        return prior_probabilities_;
-    }
+vector<float> NaiveBayesModel::GetPriorProbabilities() {
+    return prior_probabilities_;
+}
 
-    float NaiveBayesModel::GetConditionalProbability(size_t row, size_t col, int class_label, int shade) {
-        return conditional_probabilities_.GetValue(row, col, class_label, shade);
-    }
+float NaiveBayesModel::GetConditionalProbability(size_t row, size_t col, int class_label, int shade) {
+    return conditional_probabilities_.GetValue(row, col, class_label, shade);
+}
 
-    float NaiveBayesModel::GetPriorProbability(int class_label) {
-        
-        if(class_label < 0 || class_label > 9) {
-            throw std::invalid_argument("Class must be between 0 and 9 (inclusive)");
-        }
-        
-        return prior_probabilities_[class_label];
+float NaiveBayesModel::GetPriorProbability(int class_label) {
+    if(class_label < 0 || class_label > 9) {
+        throw std::invalid_argument("Class must be between 0 and 9 (inclusive)");
     }
+    return prior_probabilities_[class_label];
+}
     
-    void NaiveBayesModel::SetProbabilityValue(size_t row, size_t col, size_t class_label, size_t shade, float val) {
-        conditional_probabilities_.SetValue(row, col, class_label, shade, val);
-    }
+void NaiveBayesModel::SetProbabilityValue(size_t row, size_t col, size_t class_label, size_t shade, float val) {
+    conditional_probabilities_.SetValue(row, col, class_label, shade, val);
+}
 
-    void NaiveBayesModel::SetPriorValue(size_t class_label, float val) {
-        prior_probabilities_[class_label] = val;
-    }
+void NaiveBayesModel::SetPriorValue(size_t class_label, float val) {
+    prior_probabilities_[class_label] = val;
+}
 
-    void NaiveBayesModel::AddPriorValue(float val) {
-        prior_probabilities_.push_back(val);
-    }
+void NaiveBayesModel::AddPriorValue(float val) {
+    prior_probabilities_.push_back(val);
+}
 
-    size_t NaiveBayesModel::GetRowSize() {
-        return kRowSize;
-    }
+size_t NaiveBayesModel::GetRowSize() {
+    return kRowSize;
+}
 
-    size_t NaiveBayesModel::GetColSize() {
-        return kColSize;
-    }
+size_t NaiveBayesModel::GetColSize() {
+    return kColSize;
+}
     
-    void NaiveBayesModel::Print() {
-        for (size_t row = 0; row < conditional_probabilities_.GetRowSize(); row++) {
-            for (size_t col = 0; col < conditional_probabilities_.GetColSize(); col++) {
-                std::cout << to_string(row) << " " << to_string(col) << std::endl;
-                for (size_t class_label = 0; class_label < conditional_probabilities_.GetClassSize(); class_label++) {
-                    for (size_t shade = 0; shade < conditional_probabilities_.GetShadeSize(); shade++) {
-                        std::cout  << to_string(conditional_probabilities_.GetValue(row, col, class_label, shade));
-                        if (shade != conditional_probabilities_.GetShadeSize() - 1) {
-                            std::cout  << " ";
-                        }
+void NaiveBayesModel::Print() {
+    for (size_t row = 0; row < conditional_probabilities_.GetRowSize(); row++) {
+        for (size_t col = 0; col < conditional_probabilities_.GetColSize(); col++) {
+            std::cout << to_string(row) << " " << to_string(col) << std::endl;
+            for (size_t class_label = 0; class_label < conditional_probabilities_.GetClassSize(); class_label++) {
+                for (size_t shade = 0; shade < conditional_probabilities_.GetShadeSize(); shade++) {
+                    std::cout  << to_string(conditional_probabilities_.GetValue(row, col, class_label, shade));
+                    if (shade != conditional_probabilities_.GetShadeSize() - 1) {
+                        std::cout  << " ";
                     }
-                    std::cout  << std::endl;
                 }
+                std::cout  << std::endl;
             }
         }
     }
+}
     
-    std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model) {
+std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model) {
+    if(is.peek() == std::istream::traits_type::eof() || is.eof()) {
+        throw std::exception();
+    } 
         
-        if(is.peek() == std::istream::traits_type::eof() || is.eof()) {
-            throw std::exception();
-        } 
-        
-        vector<size_t> sizes;
+    vector<size_t> sizes;
 
-        //gets the sizes from first line of file
-        std::string line;
-        std::string::size_type size_value;
+    //gets the sizes from first line of file
+    std::string line;
+    std::string::size_type size_value;
+    std::getline(is, line);
+    std::stringstream line_stream(line);
+    std::string value_str;
+    while (line_stream >> value_str) {
+        sizes.push_back(std::stoi(value_str, &size_value));
+    }
+
+    for(size_t index = 0; index < sizes[2]; index++) {
         std::getline(is, line);
-        std::stringstream line_stream(line);
-        std::string value_str;
-        while (line_stream >> value_str) {
-            sizes.push_back(std::stoi(value_str, &size_value));
-        }
-
-        for(size_t index = 0; index < sizes[2]; index++) {
-            std::getline(is, line);
-            bayes_model.prior_probabilities_.push_back(std::stof(line));
-        }
-
-        //gets all of the data based on coordinates and shades
-        while (!is.eof()) {
-
-            //gets the row and column of the first two dimensions of the 4d vector
-            vector<int> position;
-            std::getline(is, line);
-            std::stringstream locations(line);
-            std::string coordinate;
-            while (locations >> coordinate) {
-                position.push_back(std::stoi(coordinate));
-            }
-
-            //next lines are the shades associated with each class
-            for (size_t class_label = 0; class_label < sizes[2]; class_label++) {
-
-                //extracts the shades from a line
-                std::getline(is, line);
-                std::stringstream shade_probabilities(line);
-                std::string individual_shade;
-
-                //place them in the correct index of the 4th level vector
-                size_t shade_index = 0;
-                while (shade_probabilities >> individual_shade && shade_index < sizes[3]) {
-                    float shadeValue = std::stof(individual_shade);
-                    bayes_model.SetProbabilityValue(position[0], position[1], class_label,
-                                                                       shade_index, shadeValue);
-                    shade_index++;
-                }
-            }
-        }
-
-        return is;
+        bayes_model.prior_probabilities_.push_back(std::stof(line));
     }
 
-    std::ostream &operator<<(std::ostream &os, NaiveBayesModel &bayes_model) {
-        FourDimensional_Vector values = bayes_model.conditional_probabilities_;
-        //print out four key sizes of 4d vector
-        os << to_string(values.GetRowSize()) << " " << to_string(values.GetColSize()) << " "
-           << to_string(values.GetClassSize()) << " " << to_string(values.GetShadeSize()) << std::endl;
+    //gets all of the data based on coordinates and shades
+    while (!is.eof()) {
 
-        //print out the prior probabilites to the file
-        vector<float> priors = bayes_model.prior_probabilities_;
-        for(size_t index = 0; index < priors.size(); index++) {
-            os << priors[index] << std::endl;
+        //gets the row and column of the first two dimensions of the 4d vector
+        vector<int> position;
+        std::getline(is, line);
+        std::stringstream locations(line);
+        std::string coordinate;
+        while (locations >> coordinate) {
+            position.push_back(std::stoi(coordinate));
         }
+
+        //next lines are the shades associated with each class
+        for (size_t class_label = 0; class_label < sizes[2]; class_label++) {
+
+            //extracts the shades from a line
+            std::getline(is, line);
+            std::stringstream shade_probabilities(line);
+            std::string individual_shade;
+
+            //place them in the correct index of the 4th level vector
+            size_t shade_index = 0;
+            while (shade_probabilities >> individual_shade && shade_index < sizes[3]) {
+                float shadeValue = std::stof(individual_shade);
+                bayes_model.SetProbabilityValue(position[0], position[1], class_label, shade_index, shadeValue);
+                shade_index++;
+            }
+        }
+    }
+    return is;
+}
+
+std::ostream &operator<<(std::ostream &os, NaiveBayesModel &bayes_model) {
+    FourDimensional_Vector values = bayes_model.conditional_probabilities_;
+    
+    //print out four key sizes of 4d vector
+    os << to_string(values.GetRowSize()) << " " << to_string(values.GetColSize()) << " "
+       << to_string(values.GetClassSize()) << " " << to_string(values.GetShadeSize()) << std::endl;
+
+    //print out the prior probabilities to the file
+    vector<float> priors = bayes_model.prior_probabilities_;
+    for(size_t index = 0; index < priors.size(); index++) {
+        os << priors[index] << std::endl;
+    }
         
-        //print out the row/col then the shades
-        for (size_t row = 0; row < values.GetRowSize(); row++) {
-            for (size_t col = 0; col < values.GetColSize(); col++) {
-                os << to_string(row) << " " << to_string(col) << std::endl;
-                for (size_t class_label = 0; class_label < values.GetClassSize(); class_label++) {
-                    for (size_t shade = 0; shade < values.GetShadeSize(); shade++) {
-                        os << to_string(values.GetValue(row, col, class_label, shade));
-                        if (shade != values.GetShadeSize() - 1) {
-                            os << " ";
-                        }
+    //print out the row/col then the shades
+    for (size_t row = 0; row < values.GetRowSize(); row++) {
+        for (size_t col = 0; col < values.GetColSize(); col++) {
+            os << to_string(row) << " " << to_string(col) << std::endl;
+            for (size_t class_label = 0; class_label < values.GetClassSize(); class_label++) {
+                for (size_t shade = 0; shade < values.GetShadeSize(); shade++) {
+                    os << to_string(values.GetValue(row, col, class_label, shade));
+                    if (shade != values.GetShadeSize() - 1) {
+                        os << " ";
                     }
-                    os << std::endl;
                 }
+                os << std::endl;
             }
         }
-        return os;
     }
+    return os;
+}
 } //namespace naivebayes

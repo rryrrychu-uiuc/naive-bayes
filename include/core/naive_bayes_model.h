@@ -22,12 +22,34 @@ namespace naivebayes {
          */
         NaiveBayesModel(vector<TrainingData> dataset);
 
+        /**
+         * Read a model from a file
+         */
+        friend std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model);
+
+        /**
+        * Write a model to a file
+        */
+        friend std::ostream &operator<<(std::ostream &is, NaiveBayesModel &bayes_model);
+        
+        /**
+         * Return all of the probability values
+         */
         FourDimensional_Vector GetConditionalProbabilities();
 
+        /**
+         * Return all of the prior probabilities
+         */
         vector<float> GetPriorProbabilities();
 
+        /**
+        * Get a single probability value for a pixel of a certain shade and class
+        */
         float GetConditionalProbability(size_t row, size_t col, int class_label, int shade);
 
+        /**
+        * Get a single prior probability value
+        */
         float GetPriorProbability(int class_label);
 
         void SetProbabilityValue(size_t row, size_t col, size_t class_label, size_t shade, float val);
@@ -41,10 +63,6 @@ namespace naivebayes {
         size_t GetColSize();
         
         void Print();
-        
-        friend std::istream &operator>>(std::istream &is, NaiveBayesModel &bayes_model);
-
-        friend std::ostream &operator<<(std::ostream &is, NaiveBayesModel &bayes_model);
 
     private:
         const float kLaplaceSmoothingValue;
@@ -68,7 +86,6 @@ namespace naivebayes {
 
         //calculate the prior probabilities using formula from instructions and the counts of each class
         void CalculatePriorProbabilities(vector<int> class_counts);
-        
     };
 }
 #endif //NAIVE_BAYES_NAIVE_BAYES_MODEL_H

@@ -30,9 +30,7 @@ std::istream &operator>>(std::istream& is, ImageProcessor& processed_images) {
                 image.SetValue(row, col, line[col]);
             }
         }
-
         processed_images.labelled_images.push_back(TrainingData(number_label, image));
     }
-
     return is;
 }

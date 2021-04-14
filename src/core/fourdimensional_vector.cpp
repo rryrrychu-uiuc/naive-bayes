@@ -5,7 +5,6 @@ using std::vector;
 FourDimensional_Vector::FourDimensional_Vector(size_t row_num, size_t col_num, size_t class_num, size_t shade_num,
                                                float default_value) : row_size(row_num), col_size(col_num),
                                                                        class_size(class_num), shade_size(shade_num) {
-
     for (size_t row = 0; row < row_num; row++) {
 
         vector<vector<vector<float>>> probability_matrix;

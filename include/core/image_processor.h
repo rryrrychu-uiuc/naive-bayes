@@ -19,7 +19,7 @@ public:
     vector<TrainingData> GetLabelledImages();
 
     /**
-     * Override the stream read operator to read images from a file
+     * Override the stream read operator to read images (matrices) and labels from a file
      */
     friend std::istream &operator>>(std::istream &is, ImageProcessor &processed_images);
 

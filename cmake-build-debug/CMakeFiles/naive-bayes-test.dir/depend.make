@@ -37,6 +37,11 @@ CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\trai
 CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\include\core\validator.h
 CMakeFiles\naive-bayes-test.dir\src\core\validator.cpp.obj: ..\src\core\validator.cpp
 
+CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\core\classifier.h
+CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\core\fourdimensional_vector.h
+CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\core\matrix.h
+CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\core\naive_bayes_model.h
+CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\core\training_data.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\visualizer\naive_bayes_app.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\include\visualizer\sketchpad.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\boost\assert.hpp
@@ -914,6 +919,7 @@ CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: C:\Users\
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\glm\vector_relational.hpp
 CMakeFiles\naive-bayes-test.dir\src\visualizer\naive_bayes_app.cc.obj: ..\src\visualizer\naive_bayes_app.cc
 
+CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: ..\include\core\matrix.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: ..\include\visualizer\sketchpad.h
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\boost\assert.hpp
 CMakeFiles\naive-bayes-test.dir\src\visualizer\sketchpad.cc.obj: C:\Users\rryrr\CLionProjects\Cinder\include\boost\cerrno.hpp

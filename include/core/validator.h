@@ -30,13 +30,15 @@ public:
     */
     vector<int> GetDeterminedClassifications();
     
+    /**
+     * Read a file with labels and images and save all of the classifications of the images 
+     */
     friend std::istream &operator>>(std::istream &is, Validator &target_validator);
     
 private:
     Classifier target_classifier_;
     vector<int> classifications_;
     vector<int> labelled_values_;
-    
 };
 
 

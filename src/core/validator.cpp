@@ -8,6 +8,7 @@ float Validator::GetClassifierAccuracy() {
         throw std::exception("No test file has been input to the validator to validate classifier");
     }
     
+    //sum up all of the correctly classified classes
     int num_correct_classified = 0;
     for(size_t index = 0; index < classifications_.size(); index++) {
         if (classifications_[index] == labelled_values_[index]) {
@@ -61,6 +62,5 @@ std::istream &operator>>(std::istream& is, Validator& target_validator) {
         //classify the image and store its predicted classification in its own vector
         target_validator.classifications_.push_back(target_classifier.GetPredictedClass(image));
     }
-
     return is;
 }

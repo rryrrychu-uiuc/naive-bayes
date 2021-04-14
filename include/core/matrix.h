@@ -17,6 +17,11 @@ public:
     */
     Matrix(size_t row_size, size_t col_size);
     
+    /**
+    * Override the stream read operator to read a single matrix from a file
+    */
+    friend std::istream &operator>>(std::istream &is, Matrix &target_matrix);
+    
     void SetValue(size_t row, size_t col, char val);
 
     char GetValue(size_t row, size_t col) const;
@@ -24,9 +29,7 @@ public:
     size_t GetRowSize();
     
     size_t GetColSize();
-
-    friend std::istream &operator>>(std::istream &is, Matrix &target_matrix);
-
+    
 private:
     vector<vector<char>> data_values_;
     const size_t kRowSize;
