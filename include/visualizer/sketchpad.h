@@ -2,6 +2,7 @@
 
 #include "cinder/gl/gl.h"
 #include <vector>
+#include <core/matrix.h>
 
 using std::vector;
 
@@ -51,11 +52,13 @@ class Sketchpad {
    * Set all of the sketchpad pixels to an unshaded state.
    */
   void Clear();
+  
+  Matrix GetImage();
 
  private:
   const char kShadedValue = '#';
   const char kUnShadedValue = ' ';
-  vector<vector<char>> colors; 
+  Matrix colors_; 
     
   glm::vec2 top_left_corner_;
 

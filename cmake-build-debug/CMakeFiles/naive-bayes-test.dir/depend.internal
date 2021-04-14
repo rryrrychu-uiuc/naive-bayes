@@ -1799,5 +1799,11 @@ CMakeFiles/naive-bayes-test.dir/tests/test_main.cc.obj
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/test_main.cc
  _deps/catch2-src/single_include/catch2/catch.hpp
 CMakeFiles/naive-bayes-test.dir/tests/validator_test.cpp.obj
+ ../include/core/classifier.h
+ ../include/core/fourdimensional_vector.h
+ ../include/core/matrix.h
+ ../include/core/naive_bayes_model.h
+ ../include/core/training_data.h
+ ../include/core/validator.h
  C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/validator_test.cpp
  _deps/catch2-src/single_include/catch2/catch.hpp

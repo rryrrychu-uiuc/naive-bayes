@@ -19,7 +19,7 @@ void Matrix::SetValue(size_t row, size_t col, char val) {
     data_values_[row][col] = val;
 }
 
-char Matrix::GetValue(size_t row, size_t col) {
+char Matrix::GetValue(size_t row, size_t col) const {
     if(row >= kRowSize || col >= kColSize) {
         throw std::invalid_argument("Invalid row or column index");
     }

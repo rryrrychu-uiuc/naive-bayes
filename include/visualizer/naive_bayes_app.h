@@ -1,9 +1,11 @@
 #pragma once
 
+#include <core/classifier.h>
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "sketchpad.h"
+
 
 namespace naivebayes {
 
@@ -23,12 +25,13 @@ class NaiveBayesApp : public ci::app::App {
   void keyDown(ci::app::KeyEvent event) override;
   
   // provided that you can see the entire UI on your screen.
-  const double kWindowSize = 875;
+  const double kWindowSize = 1000;
   const double kMargin = 100;
   const size_t kImageDimension = 28;
 
  private:
   Sketchpad sketchpad_;
+  NaiveBayesModel target_model_;
   int current_prediction_ = -1;
 };
 

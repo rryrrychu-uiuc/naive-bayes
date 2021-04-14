@@ -11,14 +11,13 @@ Sketchpad::Sketchpad(const vec2& top_left_corner, size_t num_pixels_per_side,
     : top_left_corner_(top_left_corner),
       num_pixels_per_side_(num_pixels_per_side),
       pixel_side_length_(sketchpad_size / num_pixels_per_side),
-      brush_radius_(brush_radius){
+      brush_radius_(brush_radius),
+      colors_(num_pixels_per_side, num_pixels_per_side){
     
         for(size_t row = 0; row < num_pixels_per_side; row++) {
-            vector<char> col_colors;
             for(size_t col = 0; col < num_pixels_per_side; col++) {
-                col_colors.push_back(kUnShadedValue);
+                colors_.SetValue(row, col, kUnShadedValue);
             }
-            colors.push_back(col_colors);
         }
     }
 
@@ -32,9 +31,9 @@ void Sketchpad::Draw() const {
                 pixel_top_left + vec2(pixel_side_length_, pixel_side_length_);
         ci::Rectf pixel_bounding_box(pixel_top_left, pixel_bottom_right);
         
-        if(colors[row][col] == kUnShadedValue) {
+        if(colors_.GetValue(row, col) == kUnShadedValue) {
             ci::gl::color(ci::Color("White"));
-        } else if(colors[row][col] == kShadedValue) {
+        } else if(colors_.GetValue(row, col) == kShadedValue) {
             ci::gl::color(ci::Color::gray(0.3f));
         }
         
@@ -56,7 +55,7 @@ void Sketchpad::HandleBrush(const vec2& brush_screen_coords) {
 
       if (glm::distance(brush_sketchpad_coords, pixel_center) <=
           brush_radius_) {
-          colors[row][col] = kShadedValue;
+          colors_.SetValue(row, col, kShadedValue);
       }
     }
   }
@@ -65,9 +64,13 @@ void Sketchpad::HandleBrush(const vec2& brush_screen_coords) {
 void Sketchpad::Clear() {
     for (size_t row = 0; row < num_pixels_per_side_; ++row) {
         for (size_t col = 0; col < num_pixels_per_side_; ++col) {
-            colors[row][col] = kUnShadedValue;
+            colors_.SetValue(row, col, kUnShadedValue);
         }
     }
+}
+
+Matrix Sketchpad::GetImage() {
+    return colors_;
 }
 
 }  // namespace visualizer

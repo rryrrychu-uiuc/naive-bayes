@@ -19,7 +19,7 @@ public:
     
     void SetValue(size_t row, size_t col, char val);
 
-    char GetValue(size_t row, size_t col);
+    char GetValue(size_t row, size_t col) const;
     
     size_t GetRowSize();
     
