@@ -43,14 +43,6 @@ fstream
 -
 core/classifier.h
 -
-
-C:/Users/rryrr/CLionProjects/Cinder/my-projects/naive-bayes-rryrrychu-uiuc/tests/matrix_test.cpp
-catch2/catch.hpp
--
-core/matrix.h
--
-fstream
--
 iostream
 -
 

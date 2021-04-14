@@ -54,7 +54,7 @@ float ValidateClassifier(std::string file_path, NaiveBayesModel new_model) {
 int main() {
 
     NaiveBayesModel bayes_model = TrainModel("data/trainingimagesandlabels.txt");
-    SaveModel("apps/saved_model2.txt", bayes_model);
+    SaveModel("apps/saved_model.txt", bayes_model);
     
     NaiveBayesModel new_model = LoadModel("apps/saved_model.txt");
     //new_model.Print();

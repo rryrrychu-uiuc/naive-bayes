@@ -9,10 +9,6 @@ Classifier::Classifier(NaiveBayesModel target_model): trained_model_(target_mode
 
 int Classifier::GetPredictedClass(Matrix image) {
     
-    if(image.GetRowSize() != GetRowSize() || image.GetColSize() != GetColSize()) {
-        throw std::invalid_argument("Image must be " + std::to_string(GetRowSize())  + "x" + std::to_string(GetColSize()) );
-    }
-    
     vector<float> likelihood_scores = CalculateLikelihoodScores(image);
     
     int max_index = 0;
@@ -29,6 +25,10 @@ int Classifier::GetPredictedClass(Matrix image) {
 }
 
 vector<float> Classifier::CalculateLikelihoodScores(Matrix image) {
+
+    if(image.GetRowSize() != GetRowSize() || image.GetColSize() != GetColSize()) {
+        throw std::invalid_argument("Image must be " + std::to_string(GetRowSize())  + "x" + std::to_string(GetColSize()) );
+    }
     
     vector<float> likelihood_scores;
     
@@ -40,8 +40,10 @@ vector<float> Classifier::CalculateLikelihoodScores(Matrix image) {
                 int pixel_value = 0;
                 if(image.GetValue(row, col) == kUnshadedPixel) {
                     pixel_value = kUnshadedValue;
-                } else {
+                } else if (image.GetValue(row, col) == kDarkPixel || image.GetValue(row, col) == kShadedPixel){
                     pixel_value = kShadedValue;
+                } else {
+                    throw std::invalid_argument("Not valid pixel type");
                 }
                 likelihood_score += log((float)trained_model_.GetConditionalProbability(row, col, class_label, pixel_value));
             }
